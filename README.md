@@ -12,6 +12,8 @@ Brindaremos un servicio de calidad y variedad
 <<<<<<< HEAD
 - Diego Luciaw tengo 46 años, juego videosjuegos desde que tengo uso de razon y miro pelis de igual forma. Quiero aprender y generar un sitio para gente con la misma pasion.
 
+- David Martin tengo 22 años, soy fan de los videojuegos y de las peliculas. En mis tiempos libres programo, rapeo y juego al futbol. 
+
 https://www.tematika.com/
 https://www.filmico.tv/
 https://ww1.cuevana3.me/
