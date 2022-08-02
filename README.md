@@ -1,4 +1,4 @@
-# Ecommerce-LaUnion
+# Ecommerce-LaUnion :movie_camera: :alien: :video_game: :trophy:
 > Bienvenidos al proyecto que nació con la idea del ser un ecommerce de venta, compra, alquiler y canje de peliculas y video-juegos
 
 - El público objetivo del proyecto es para todo público, por que la página cuenta con diversidad de categorías y contenido.
