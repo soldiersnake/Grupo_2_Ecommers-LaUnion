@@ -14,6 +14,19 @@ Brindaremos un servicio de calidad y variedad
 
 - David Martin tengo 22 años, soy fan de los videojuegos y de las peliculas. En mis tiempos libres programo, rapeo y juego al futbol. 
 
+// Gama y opciones de colores para la web
+-opcion 1: #FF0000 (color principal, rojo fuerte)
+    triadico: #FF0000 / #00FF00 / #0000FF
+    analogo: #FF0000 / #FF8000 / #FFFF00 / #80FF00 / #00FF00 / #00FF80
+-opcion 2: #DA6917 (color principal, similar al anterior aunque en tonos mas oscuros)
+    triadico: #DA6917 / #17DA69 / #6917DA
+    analogo: #DA6917 / #DACA1 / #88DA17 / #27DA17 / #17DA69 / #17DACB
+-opcion 3: #0049FF (color principal, azul fuerte)
+    triadico: #0049FF / #FF0049 / #49FF00
+    analogo: #0049FF / #3700FF / #B600FF / #FF00C8 / #FF0049 / #FF3700
+
+
+// Web las cuales inspiran esta experiencia
 https://www.tematika.com/
 https://www.filmico.tv/
 https://ww1.cuevana3.me/
