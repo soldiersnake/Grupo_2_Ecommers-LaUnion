@@ -31,5 +31,15 @@ Brindaremos un servicio de calidad y variedad
 - https://play.google.com/store/movies:
 - https://netflix.com:
 - http://www.hottoys.com.hk/:
+- https://www.figurasdecomics.com:
+- https://www.universal-comics.com:
+
+
+**link proyecto en figma**
+https://www.figma.com/proto/h9FMTs7JZIu4neDd6kIref/Untitled?node-id=87%3A3&scaling=min-zoom&page-id=87%3A2
+
+
+**link seguimioento de proyecto en trello**
+https://trello.com/b/mjfDslmu/launion
 =======
 
