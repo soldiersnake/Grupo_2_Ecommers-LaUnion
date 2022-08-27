@@ -62,10 +62,60 @@ header img{
     margin: 10px;
 }
 
+.description{
+    
+}
+
+.button-quiero-coleccion{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    height: min-content;
+}
+
 .titulo-descripcion{
-    align-items: center;
-    justify-content: center;
-    font-display: initial;
+    
+}
+
+.medidas p{
+    font-weight: 800;
+}
+.medidas p span{
+    color: grey;
+    font-weight: 400;
+}
+
+.button-preventa{
+    background-color: rgb(255, 134, 47);
+    color: white;
+    font-weight: 400;
+    border: none;
+    border-radius: 5px;
+}
+
+.precio-regular{
+    text-decoration: line-through;
+    font-weight: 300;
+}
+
+.precio-oferta{
+    color: red;
+    font-weight: 800;
+}
+
+.button-stock{
+    background-color: rgb(223, 234, 97);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-cesta{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-radius: 5px;
 }
 
 
