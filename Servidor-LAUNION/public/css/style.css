@@ -26,6 +26,8 @@ header img{
     display: flex;
 }
 
+
+/* BARRA DE NAVEGACION */
 .nav-bar{
     text-align: right;
 }
@@ -43,7 +45,32 @@ header img{
     color: black;
 }
 
+/* Main y contenedor*/
 
+.contenedor{
+    width: 50%;
+    height: 60%;
+    background-color: white;
+    display: flex;
+    margin: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-contenedor{
+    width: 40%;
+    margin: 10px;
+}
+
+.titulo-descripcion{
+    align-items: center;
+    justify-content: center;
+    font-display: initial;
+}
+
+
+
+/* FOOTER */
 .icons-footer{
     text-align: center;
 }
