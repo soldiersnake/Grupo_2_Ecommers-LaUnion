@@ -1,0 +1,53 @@
+body{
+    background-color: #FF0000;
+}
+
+header{
+    padding-top: 5px;
+}
+
+h1{
+    color: yellow;
+    text-decoration: solid;
+}
+
+main{
+    background-image: url('/img/erik-mclean-LSPUdV6IWsY-unsplash.jpg');
+    height: 800px;
+    width: 100%;
+    display: flex;
+}
+
+header img{
+    width: 5%;
+    height: 5%;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.nav-bar{
+    text-align: right;
+}
+
+.nav-bar li{
+    list-style: none;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px;
+    
+}
+
+.nav-bar li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.icons-footer{
+    text-align: center;
+}
+
+.icons-footer i{
+    padding: 15px;
+}
