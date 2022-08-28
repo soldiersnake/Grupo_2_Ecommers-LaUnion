@@ -4,6 +4,11 @@ body{
 
 header{
     padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 h1{
@@ -53,18 +58,24 @@ header img{
     display: flex;
     margin: 10%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     border-radius: 5px;
     border: 3px solid #2f528f;
 }
 
 .img-contenedor{
+    display: inline;
     width: 40%;
     margin: 10px;
 }
 
+#producto{
+    width: 100%;
+}
+
 .description{
-    
+    width: 50%;
+    display: inline;
 }
 
 .button-quiero-coleccion{
@@ -133,7 +144,5 @@ header img{
 /* MEDIAS query */
 
 @media (min-width: 992px){
-    .img-contenedor{
-        width: 20%;
-    }
+    
 }
