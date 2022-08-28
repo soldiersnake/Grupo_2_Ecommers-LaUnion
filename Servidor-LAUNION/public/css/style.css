@@ -30,6 +30,7 @@ header img{
 /* BARRA DE NAVEGACION */
 .nav-bar{
     text-align: right;
+    border-bottom: 2px solid black;
 }
 
 .nav-bar li{
@@ -48,8 +49,6 @@ header img{
 /* Main y contenedor*/
 
 .contenedor{
-    width: 50%;
-    height: 60%;
     background-color: white;
     display: flex;
     margin: 10%;
@@ -129,4 +128,12 @@ header img{
 
 .icons-footer i{
     padding: 15px;
+}
+
+/* MEDIAS query */
+
+@media (min-width: 992px){
+    .img-contenedor{
+        width: 20%;
+    }
 }
