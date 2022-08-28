@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("/img/576px.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}   
+header {
+    display: block;
+    text-align: center;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: center;
+}
+.icono {
+    width: 50px;
+    margin-right: 10px;
+}
+.contenedor {
+    width: 100%;
+    padding: 15px;
+}
+.formulario {
+    background-color: #8faadc;
+    margin-top: 4%;
+    padding: 3px;
+    border: solid 3px #2f528f;
+    border-radius: 8px;
+    z-index: 2;
+}
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;;
+}
+input[type="text"], 
+input[type="password"],
+input[type="email"] {
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+} 
+.input-contenedor {
+    margin-bottom: 20px;
+    border: 1px solid #2f528f;
+    background-color: white;
+    border-radius: 5px;
+}
+.icon {
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+.button {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #2f528f;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.button:hover {
+    background: rgb(30 92 199);
+}
+p {
+    text-align: center;
+}
+hr {
+    margin: 5px 0px;
+    border-color: #2f528f;
+}
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+.link:hover {
+    color: purple;
+}
+
+/* Por convención o estandar, se suelen
+aplicar @media en elas siguientes resoluciones: 
+min-width: 576 768 992 1200 */
+@media (min-width: 576px) {
+    body {
+        background-image: url("/img/576px.png");
+    }
+}
+@media (min-width: 768px) {
+    body {
+        background-image: url("/img/768px.png");
+    }
+}
+@media (min-width: 992px) {
+    body {
+        background-image: url("/img/992px.png");
+        
+    }
+    .img-header {
+        width: 350px;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        background: url('/img/fondo-registro.png');
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+}
