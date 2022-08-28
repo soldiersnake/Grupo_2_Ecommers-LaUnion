@@ -33,6 +33,10 @@ header img{
 
 
 /* BARRA DE NAVEGACION */
+
+#logo-principal{
+    width: 15%;
+}
 .nav-bar{
     text-align: right;
     border-bottom: 2px solid black;
