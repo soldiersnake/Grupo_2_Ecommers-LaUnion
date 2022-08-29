@@ -1,0 +1,47 @@
+.carrito-img{
+    width: 10%;
+}
+
+.div-nav{
+    background-color: #FF0000;
+    height: 10%;
+    
+}
+
+.nav-bar-carrito{
+    list-style: none;
+    display: inline-block;
+    display: flex;
+
+}
+
+.nav-bar-carrito li{
+    display: inline-block;
+}
+
+.nav-bar-carrito{
+    width: 94%;
+    justify-content: space-between;
+
+}
+h3{
+    color: blue;
+}
+
+.contenedor2{
+    background-color: white;
+    display: block;
+    border-radius: 5px;
+    border: 3px solid #2f528f;
+    
+}
+
+.detalle-carrito{
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.carrito-imagenes{
+    display: flex;
+}

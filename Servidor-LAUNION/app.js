@@ -10,7 +10,13 @@ app.listen(3001, () => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/home.html'));
+    res.sendFile(path.resolve(__dirname, './views/index.html'));
+})
+app.get('/producto', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/detalle-producto.html'));
+})
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/carrito.html'));
 })
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'));

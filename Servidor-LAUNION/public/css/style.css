@@ -37,10 +37,15 @@ header img{
 #logo-principal{
     width: 15%;
 }
+
+.div-nav{
+    /* background-color: pink; */
+}
 .nav-bar{
     text-align: right;
     border-bottom: 2px solid black;
 }
+
 
 .nav-bar li{
     list-style: none;
@@ -112,18 +117,22 @@ header img{
 .precio-regular{
     text-decoration: line-through;
     font-weight: 300;
+    margin-top: 10px;
+
 }
 
 .precio-oferta{
     color: red;
     font-weight: 800;
+    margin-top: 10px;
 }
 
 .button-stock{
-    background-color: rgb(223, 234, 97);
+    background-color: rgb(194, 204, 86);
     color: whitesmoke;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .button-cesta{
@@ -132,6 +141,7 @@ header img{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 
