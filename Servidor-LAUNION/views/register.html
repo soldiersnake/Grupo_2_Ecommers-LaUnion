@@ -11,48 +11,28 @@
 </head>
 
 <body>
+    <header>
+        <div class="icono">
+            <a href="/">
+                <img src="/img/logo.png">
+            </a>
+        </div>
+        <a href='#' class="hamburger-button">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+        <nav class="menu">
+            <ul type="none">
+                <li><a href="#">Biblioteca</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Figuras</a></li>
+                <li><a href="#">Bucar</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Sign-Up</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="main">
-        <header>
-            <img src="/img/launion.png" class="img-header">
-        </header>
         <form class="formulario">
-            <div class="cabecera">
-                <img src="/img/icono.png" class="icono">
-                <h1>Regístrate</h1>
-            </div>
-            <div class="contenedor">
-
-                <div class="input-contenedor">
-                    <i class="fa-solid fa-user icon"></i>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre Completo" required>
-                </div>
-                <div class="input-contenedor">
-                    <i class="fa-solid fa-envelope icon"></i>
-                    <input type="email" name="email" id="email" class="campo-texto" placeholder="Correo Electrónico"
-                        required>
-                </div>
-                <div class="input-contenedor">
-                    <i class="fa-solid fa-key icon"></i>
-                    <input type="password" name="password" id="password" class="campo-texto" placeholder="Contraseña"
-                        required>
-                </div>
-                <div class="input-contenedor">
-                    <i class="fa-solid fa-circle-exclamation icon"></i>
-                    <input type="password" name="password-confirm" id="password" class="campo-texto"
-                        placeholder="Confirme su contraseña" required>
-                </div>
-                <button type="submit" class="button">
-                    Regístrate
-                </button>
-                <p>
-                    Al regístrate, aceptas nuestras condiciones de uso y política de privacidad
-                </p>
-                <hr>
-                <p>
-                    ¿ No tienes una cuenta ? <a href="/login" class="link">Iniciar Sesión</a>
-
-                </p>
-            </div>
         </form>
     </div>
 </body>
