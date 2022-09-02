@@ -45,8 +45,154 @@ header {
     text-decoration: none;
     color: white;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-shadow: 1px 2px black;
 }
 /*--------------------------------------------------------*/
+/* MAIN */
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+.espacio-imagen {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+.espacio-imagen img  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.espacio-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    margin-top: 150px;
+}
+.formulario {
+    width: 50%;
+}
+h2 {
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: yellow;
+    text-shadow: 1px 2px #FF0000;
+    font-weight: 600;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    letter-spacing: 1px;
+    justify-content: center;
+}
+.inputBx {
+    margin-bottom: 20px;
+}
+.inputBx label {
+    color: #2a7194;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.inputIcon {
+    position: relative;
+    width: 100%;
+}
+.inputBx input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #2a7194;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+}
+.inputBx input[type="submit"] {
+    background: #251854;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 300;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    cursor: pointer;
+}
+input[type="file"]{
+    display: none;
+}
+input[type="submit"]:hover{
+    background-color: #fecc4f;
+    color: white;
+}
+.inputBx p {
+    color: #607d8b;
+    font-size: 16px;
+}
+.inputBx p a{
+    color: #03264C;
+    font-size: 16px;
+}
+.main__form-upload {
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #2a7194;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center;
+    border: 1px solid #2a7194;
+}
+.main__form-upload:hover {
+    background-color: #fecc4f;
+    color: white;
+}
+/* formulario inicio checkbox */
+.remember {
+    margin-bottom: 10px;
+    color: #607d8b;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+/* iconos al chequear respuestas validas en el formulario
+.inputBx .valid-value {
+    border: 1px solid #94cb91;
+}
+.inputBx .invalid-value {
+    border: 1px solid #f11e77;
+}
+.triangleWarning {
+    display: block;
+    position: absolute;
+    font-size: 16px;
+    color:  #f11e77;
+    top: 10px;
+    right: 10px;
+}
+circle-check {
+    display: block;
+    position: absolute;
+    font-size: 16px;
+    color: #94cb91;
+    top: 10px;
+    right: 10px;
+}
+.fa-triangle-exclamation, .fa-circle-check {
+    display: none;
+}
+*/
 
 /* navegacion moviles bajas resoluciones */
 @media (min-width: 350px) {
@@ -70,9 +216,6 @@ header {
     header {
         flex-direction: row;
         justify-content: space-between;
-        position: fixed;
-        z-index: 2;
-        box-shadow: 0px 6px 7px rgb(14 2 2);
     }
     .icono {
         width: 40%;
@@ -81,8 +224,52 @@ header {
         width: 60%;
     }
 }
+@media (max-width: 768px) {
+    .espacio-imagen {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .espacio-formulario {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .formulario {
+        width: 100%;
+        padding: 6%;
+        background-color: rgba(255 255 255 /0.9);
+        margin: 50px;
+        font-size: 10px;
+    }
+}
 @media (min-width: 769px) {
     header {
         font-size: 22px;
+    }
+    .main {
+        height: auto;
+    }
+    .espacio-imagen {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .espacio-formulario {
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        margin: 0;
+        margin-top: 70px;
+    }
+    .formulario {
+        width: 30%;
+        margin-right: 10%;
     }
 }

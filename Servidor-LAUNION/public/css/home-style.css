@@ -45,6 +45,7 @@ header {
     text-decoration: none;
     color: white;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-shadow: 1px 2px black;
 }
 
 /*----------------------------------*/
@@ -275,7 +276,8 @@ position: absolute en el hijo (el icono en si) */
     
     .descripcion {
         color: white;
-        font-size: 20px;
+        text-shadow: 1px 2px black;
+        font-size: 25px;
         background-color: rgba(0,0,0,0.7);
         font-family: "Comic Sans MS", "Comic Sans", cursive;
         text-align: center;
