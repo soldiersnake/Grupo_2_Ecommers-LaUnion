@@ -46,7 +46,13 @@ header {
     color: white;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     text-shadow: 1px 2px black;
+    cursor: pointer;
+    transition: color 200ms;
 }
+.menu ul li a:hover {
+    color: #ffb600;
+}
+
 
 /*----------------------------------*/
 .banner {
@@ -323,6 +329,12 @@ position: absolute en el hijo (el icono en si) */
 @media (min-width: 769px){
     header {
         font-size: 22px;
+    }
+    .menu ul li a {
+        transition: font-size 200ms;
+    }
+    .menu ul li a:hover {
+        font-size: 30px;
     }
     .producto {
         max-width: 20%;
