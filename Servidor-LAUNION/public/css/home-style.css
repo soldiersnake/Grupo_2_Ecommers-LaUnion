@@ -152,6 +152,7 @@ position: absolute en el hijo (el icono en si) */
 .precio {
     font-size: 22px;
     flex-grow: 0.3;
+    font-weight: 500;
 }
 .descuento {
     font-size: 16px;
@@ -323,8 +324,6 @@ position: absolute en el hijo (el icono en si) */
         font-family: "Comic Sans MS", "Comic Sans", cursive;
         padding: 0 0 0 15px;
     }
-    
-    
 }
 /* navegacion en escritorio: */
 @media (min-width: 769px){
