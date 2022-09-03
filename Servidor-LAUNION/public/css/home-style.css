@@ -228,6 +228,11 @@ position: absolute en el hijo (el icono en si) */
 
 
 /* navegacion moviles bajas resoluciones */
+@media (max-width: 208px) {
+    .descripcion {
+        font-size: small;
+    }
+}
 @media (min-width: 350px) {
     .hamburger-button {
         display: none;
