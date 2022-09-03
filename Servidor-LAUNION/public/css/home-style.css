@@ -113,9 +113,9 @@ hr {
     margin: 10px;
 }
 .precio-descuento {
-    display: flex;
-    align-items: center;
+    display: block;
 }
+
 /* para poder ubicar el icono como nos piden, debemos usar
 position: relative en el contenedor padre, para poder usar 
 position: absolute en el hijo (el icono en si) */
@@ -150,7 +150,7 @@ position: absolute en el hijo (el icono en si) */
     cursor: pointer;
 }
 .precio {
-    font-size: 18px;
+    font-size: 22px;
     flex-grow: 0.3;
 }
 .descuento {
@@ -272,11 +272,11 @@ position: absolute en el hijo (el icono en si) */
     .producto {
         width: 40%;
         margin: 3px;
-        transition: box-shadow 450ms;
+        transition: all 450ms;
         position: relative;
         z-index: 1;
     }
-    .producto:hover {
+    .producto:hover{
         box-shadow : 5px 10px 10px rgb(100,100,100 );
     }
     
@@ -319,10 +319,11 @@ position: absolute en el hijo (el icono en si) */
 @media (max-width: 576px) {
     .descripcion {
         position: absolute;
-        bottom: 0;
+        bottom: 10px;
         font-family: "Comic Sans MS", "Comic Sans", cursive;
         padding: 0 0 0 15px;
     }
+    
     
 }
 /* navegacion en escritorio: */
