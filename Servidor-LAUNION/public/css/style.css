@@ -63,28 +63,62 @@ header img{
 /* Main y contenedor*/
 
 .contenedor{
-    background-color: white;
+    background-color: rgba(1000, 0, 0, 0.75);
     display: flex;
-    margin: 10%;
+    margin: 20%;
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
     border: 3px solid #2f528f;
+    flex-direction: column;
+    height: 75%;
+    overflow: scroll;
+    justify-content: unset;
+}
+
+.contenedor-carrito{
+    background-color: white;
+    display: flex;
+    margin: 10%;
+    border-radius: 5px;
+    border: 3px solid #2f528f;
+    height: fit-content;
+    justify-content: space-around;
 }
 
 .img-contenedor{
     display: inline;
-    width: 40%;
+    width: 60%;
     margin: 10px;
+    text-align: center;
+}
+
+.img-contenedor-carrito{
+    display: inline;
+    width: 10%;
+    margin: 10px;
+    text-align: center;
 }
 
 #producto{
-    width: 100%;
+    width: 70%;
 }
 
 .description{
-    width: 50%;
+    width: 90%;
     display: inline;
+    justify-content: center;
+    border-top: 1px solid red;
+    margin: 5px;
+    padding: 15px;
+}
+
+.description-carrito{
+    display: inline;
+    justify-content: center;
+    border-top: 1px solid red;
+    margin: 5px;
+    padding: 15px;
 }
 
 .button-quiero-coleccion{
@@ -92,6 +126,25 @@ header img{
     color: white;
     border-radius: 5px;
     height: min-content;
+    padding: 5px;
+
+}
+
+.button-quiero-coleccion:hover{
+    border: 2px solid yellow;
+}
+
+.button-quitar{
+    background-color: black;
+    color: white;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 10px;
+    border: solid 3px black;
+}
+
+.button-quitar:hover{
+    background-color: red;
 }
 
 .titulo-descripcion{
@@ -112,13 +165,20 @@ header img{
     font-weight: 400;
     border: none;
     border-radius: 5px;
+    padding: 5px;
+    margin: 5px 5px 5px 0px;
+}
+
+.button-preventa:hover{
+    background-color: black;
+    color: yellow;
+    border: 2px solid yellow;
 }
 
 .precio-regular{
     text-decoration: line-through;
     font-weight: 300;
     margin-top: 10px;
-
 }
 
 .precio-oferta{
@@ -133,6 +193,13 @@ header img{
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+    padding: 5px;
+}
+
+.button-stock:hover{
+    color: black;
+    border: solid 2px red;
+    background-color: yellow;
 }
 
 .button-cesta{
@@ -142,6 +209,14 @@ header img{
     font-weight: 900;
     border-radius: 5px;
     margin-top: 10px;
+    padding: 10px;
+    font-size: larger;
+
+}
+
+.button-cesta:hover{
+    background-color: blueviolet;
+    color: yellow;
 }
 
 
@@ -157,5 +232,7 @@ header img{
 
 /* MEDIAS query */
 @media (min-width: 992px){
-    
+    .contenedor{
+        margin-top: 10%;
+    }
 }

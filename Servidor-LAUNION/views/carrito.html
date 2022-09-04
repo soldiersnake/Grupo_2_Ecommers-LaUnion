@@ -8,77 +8,79 @@
   <!-- version 5.15.14 de FONTAWESOME -->
   <script src="https://kit.fontawesome.com/ad85f89714.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/home-style.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/carrito.css">
   <title>La Union</title>
 </head>
 
 <body>
-  <header>
-    <img src="/img/icono.png" alt="Logo-Union-2">
-    <img id="logo-principal" src="/img/launion.png" alt="logo-principal">
-    <div class="nav-bar">
-      <ul>
-        <li><a href="/">INICIO</a></li>
-        <li><a href="#">BIBLIOTECA</a></li>
-        <li><a href="#">JUEGOS</a></li>
-        <li><a href="#">FIGURAS</a></li>
-        <li><a href="#"><i class="fas fa-search"></i></a></li>
-        <li><a href="/register">REGISTRO</a></li>
-        <li><a href="/login"><i class="fas fa-ghost fa-lg"></i></a></li>
-      </ul>
-    </div>
-  </header>
   
-
-  <main>
-
-    <div class="contenedor2">
-
-      <div class="div-nav">
-        <ul class="nav-bar-carrito">
-          <li>
-            Mi Cesta
-          </li>
-          <li>
-            Envio
-          </li>
-          <li>
-            Facturacion
-          </li>
-          <li>
-            Finalizar
-          </li>
+  <header>
+    <div class="icono">
+        <a href="/">
+            <img src="/img/logo.png">
+        </a>
+    </div>
+    <a href='#' class="hamburger-button">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+    <nav class="menu">
+        <ul type="none">
+            <li><a href="#">Biblioteca</a></li>
+            <li><a href="#">Juegos</a></li>
+            <li><a href="#">Figuras</a></li>
+            <li><a href="#">Bucar</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Sign-Up</a></li>
         </ul>
+    </nav>
+</header>
+  
+  <main>
+    <div class="contenedor-carrito">
+      <div class="img-contenedor-carrito">
+        <img id="producto" src="/img/spiderman.jpg" alt="spiderman">
       </div>
-      
-      <div class="detalle-carrito">
-        <div class="carrito-imagenes">
-          <img class="carrito-img" src="/img/carrito-batman-pop.jpg" alt="item">
+      <div class="description-carrito">
+        <div class="titulo-descripcion-carrito">
+          <h3>Spiderman edicion Gold</h3>
+          <p>Coleccion limitada de unas de las artes mas prestigiadas de stanLee</p>
         </div>
         <div>
-          <h3>POP batman - edicion 243</h3>
-          <p>Precio: <span>43€</span></p>
+          <span class="precio-regular">7,29€ </span><span class="precio-oferta">5,99€</span>
+          <button class="button-quitar">X</button>
         </div>
       </div>
-
     </div>
-
+    </div>
   </main>
-
-
-  <footer>
-    <div class="icons-footer">
-      <div class="space-icons">
-        <i class="fab fa-facebook-f fa-4x"></i>
-        <i class="fab fa-tiktok fa-4x"></i>
-        <i class="fas fa-envelope fa-4x"></i>
-        <i class="fab fa-instagram-square fa-4x"></i>
-        <i class="fab fa-twitch fa-4x"></i>
-        <i class="fab fa-twitter fa-4x"></i>
-      </div>
+  <section class="footer">
+    <div class="social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-snapchat"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
     </div>
-  </footer>
+
+    <ul class="list">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Terms</a>
+      </li>
+      <li>
+        <a href="#">Privacy Policy</a>
+      </li>
+    </ul>
+    <p class="copyright">Grupo 02 La-Unión @ 2022</p>
+</section>
 </body>
 
 </html>
