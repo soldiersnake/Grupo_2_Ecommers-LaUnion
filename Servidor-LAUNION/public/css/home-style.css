@@ -346,7 +346,7 @@ position: absolute en el hijo (el icono en si) */
     }
     footer {
         display: flex;
-        position: relative;
+        position: absolute;
     }
     footer section {
         margin-bottom: 4%; 

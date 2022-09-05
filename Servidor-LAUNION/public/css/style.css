@@ -1,5 +1,7 @@
-body{
-    background-color: #FF0000;
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
 
 header{
@@ -18,9 +20,12 @@ h1{
 
 main{
     background-image: url('/img/erik-mclean-LSPUdV6IWsY-unsplash.jpg');
-    height: 800px;
-    width: 100%;
+    background-size: cover;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
 }
 
 header img{
@@ -63,45 +68,51 @@ header img{
 /* Main y contenedor*/
 
 .contenedor{
-    background-color: rgba(1000, 0, 0, 0.75);
+    background-color: rgba(1000, 1000, 1000, 0.75);
     display: flex;
-    margin: 20%;
+    margin: 14%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     align-items: center;
     justify-content: space-around;
-    border-radius: 5px;
-    border: 3px solid #2f528f;
+    border-radius: 10px;
+    border: 4px solid #2f528f;
     flex-direction: column;
-    height: 75%;
-    overflow: scroll;
+    height: fit-content;
+    /* overflow: scroll; */
     justify-content: unset;
 }
 
 .contenedor-carrito{
-    background-color: white;
+    background-color: rgba(1000, 1000, 1000, 0.75);
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     display: flex;
-    margin: 10%;
+    margin: auto;
     border-radius: 5px;
     border: 3px solid #2f528f;
     height: fit-content;
+    width: 50%;
     justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .img-contenedor{
     display: inline;
-    width: 60%;
+    width: 80%;
     margin: 10px;
     text-align: center;
 }
 
 .img-contenedor-carrito{
     display: inline;
-    width: 10%;
+    width: 50%;
     margin: 10px;
     text-align: center;
 }
 
 #producto{
-    width: 70%;
+    width: 90%;
 }
 
 .description{
@@ -111,12 +122,13 @@ header img{
     border-top: 1px solid red;
     margin: 5px;
     padding: 15px;
+    position: relative;
 }
 
 .description-carrito{
     display: inline;
     justify-content: center;
-    border-top: 1px solid red;
+    border-bottom: 1px solid red;
     margin: 5px;
     padding: 15px;
 }
@@ -127,8 +139,9 @@ header img{
     border-radius: 5px;
     height: min-content;
     padding: 5px;
-
+    margin: 10px 0;
 }
+
 
 .button-quiero-coleccion:hover{
     border: 2px solid yellow;
@@ -147,16 +160,36 @@ header img{
     background-color: red;
 }
 
-.titulo-descripcion{
-    
+.confirmar-compra{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: blue;
+    font-size: large;
+    color: white;
 }
+
 
 .medidas p{
     font-weight: 800;
 }
 .medidas p span{
-    color: grey;
-    font-weight: 400;
+    color: blue;
+    font-size: large;
+    font-weight: 600;
+}
+
+.titulo-descripcion h3{
+    margin-bottom: 10px;
+}
+
+p{
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+.titulo-descripcion a{
+    margin-bottom: 5px;
 }
 
 .button-preventa{
@@ -219,6 +252,26 @@ header img{
     color: yellow;
 }
 
+.button-confirmarCompra{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: larger;
+
+}
+
+.button-confirmarCompra:hover{
+    background-color: blueviolet;
+    color: yellow;
+}
+
+.cantidad-producto input[type='number']{
+    width: 10%;
+}
 
 
 /* FOOTER */
@@ -230,9 +283,171 @@ header img{
     padding: 15px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-image: url("/img/fondo-header.jpg");
+    background-size: contain;
+    top: 0;
+}
+.icono {
+    width: 100%;
+    text-align: center;
+    max-width: 250px;
+}
+.icono img {
+    width: 100%;
+}
+.hamburger-button {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 4%;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.menu {
+    width: 100%;
+}
+.menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-shadow: 1px 2px black;
+    cursor: pointer;
+    transition: color 200ms;
+}
+.menu ul li a:hover {
+    color: #ffb600;
+}
+
 /* MEDIAS query */
 @media (min-width: 992px){
     .contenedor{
         margin-top: 10%;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    #producto{
+        width: 80%;
     }
 }
+
+/* navegacion moviles bajas resoluciones */
+@media (min-width: 350px) {
+    .hamburger-button {
+        display: none;
+    }
+    
+}
+@media (max-width: 350px) {
+    .menu {
+        display: none;
+    }
+}
+
+@media (max-width: 470px) {
+    header {
+        background-image: url("/img/fondo-header.jpg");
+        background-size: cover;
+    }
+}
+@media (min-width: 576px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .icono {
+        width: 40%;
+    }
+    .menu {
+        width: 60%;
+    }
+}
+
+@media (min-width: 769px) {
+    header {
+        font-size: 22px;
+    }
+    .menu ul li a {
+        transition: font-size 200ms;
+    }
+    .menu ul li a:hover {
+        font-size: 30px;
+    }
+}
+
+/* FOOTER  */
+.footer {
+    padding: 40px 0;
+    background-color: black;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  }
+  
+  .footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+  }
+  
+  .footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+  }
+  
+  .footer .social a:hover {
+    opacity: 0.9;
+  }
+  
+  .footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: white;
+  }
+  
+  .footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
+  .footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+  }
+  
+  .footer ul a:hover {
+    opacity: 1;
+  }
+  
+  .footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+  }
