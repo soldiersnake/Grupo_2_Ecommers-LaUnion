@@ -36,7 +36,7 @@ Brindaremos un servicio de calidad y variedad
 
 
 **link proyecto en figma**
-https://www.figma.com/proto/h9FMTs7JZIu4neDd6kIref/Untitled?node-id=87%3A3&scaling=min-zoom&page-id=87%3A2
+https://www.figma.com/file/h9FMTs7JZIu4neDd6kIref/home%2Fdescripcion%2Fcarrito?node-id=0%3A1
 
 
 **link seguimioento de proyecto en trello**
