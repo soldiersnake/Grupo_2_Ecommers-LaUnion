@@ -1,0 +1,1 @@
+15/09722 - pactada proxima reunion para sprint 3
