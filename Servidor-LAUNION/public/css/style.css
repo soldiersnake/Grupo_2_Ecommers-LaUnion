@@ -12,6 +12,10 @@ header{
     font-style: italic;
     font-weight: bolder;
 }
+.banner {
+    width: 100%;
+    margin-bottom: -5px;
+}
 
 h1{
     color: yellow;
@@ -358,7 +362,7 @@ header {
     }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 507px) {
     header {
         background-image: url("/img/fondo-header.jpg");
         background-size: cover;
