@@ -1,0 +1,361 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 10px;
+    background-image: url("/img/fondo-header.jpg");
+    background-size: contain;
+}
+.icono {
+    width: 100%;
+    text-align: center;
+    max-width: 250px;
+}
+.icono img {
+    width: 100%;
+}
+.hamburger-button {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 4%;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.menu {
+    width: 100%;
+}
+.menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-shadow: 1px 2px black;
+    cursor: pointer;
+    transition: color 200ms;
+}
+.menu ul li a:hover {
+    color: #ffb600;
+}
+
+
+/*----------------------------------*/
+.banner {
+    width: 100%;
+}
+
+/* MAIN */
+
+body {
+    background: linear-gradient(312deg, #e3ff00, #ff6335, #ffb600, #0bff60, #285fea, #0a040d);
+    background-size: 1400% 1400%;
+    animation: AnimationName 15s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{
+        background-position:14% 0%
+    }
+    50%{
+        background-position:87% 100%
+    }
+    100%{
+        background-position:14% 0%
+    }
+}
+main {
+    width: 95%;
+    margin: auto;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.producto {
+    margin: 10px;
+    box-shadow: none;
+    background-color: white;
+    position: relative;
+    padding: 10px;
+    
+}
+.producto img {
+    width: 100%;
+    height: 80%;
+    
+}
+h2 {
+    margin: 10px;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: yellow;
+    text-shadow: 1px 2px #FF0000;
+    background-color: rgba(0,0,0,0.2);
+}
+hr {
+    margin: 10px;
+}
+.precio-descuento {
+    display: block;
+}
+
+/* para poder ubicar el icono como nos piden, debemos usar
+position: relative en el contenedor padre, para poder usar 
+position: absolute en el hijo (el icono en si) */
+.caracteristicas {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.circulo {
+    width: 40px;
+    height: 40px;
+    color: rgba(29, 6, 235, 0.991);
+    border: 2px solid rgba(29, 6, 235, 0.991);
+    background-color: #ebebeb;
+    border-radius: 50%;
+    position: absolute;
+    right: 40%;
+    top: -28px;
+    transition: transform 450ms;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-basket-shopping {
+    font-size: 1.5em;
+}
+.circulo:hover {
+    color: rgba(8, 250, 25, 0.991);
+    border: 2px solid rgba(8, 250, 25, 0.991);
+    cursor: pointer;
+}
+.precio {
+    font-size: 22px;
+    flex-grow: 0.3;
+    font-weight: 500;
+}
+.descuento {
+    font-size: 16px;
+    color: #0ccc36;
+    flex-grow: 0.7;
+}
+
+
+/* FOOTER  */
+.footer {
+    padding: 40px 0;
+    background-color: black;
+    margin-top: 30px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  }
+  
+  .footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+  }
+  
+  .footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+  }
+  
+  .footer .social a:hover {
+    opacity: 0.9;
+  }
+  
+  .footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: white;
+  }
+  
+  .footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  
+  .footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+  }
+  
+  .footer ul a:hover {
+    opacity: 1;
+  }
+  
+  .footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+  }
+
+
+/* navegacion moviles bajas resoluciones */
+@media (max-width: 208px) {
+    .descripcion {
+        font-size: small;
+    }
+}
+@media (min-width: 350px) {
+    .hamburger-button {
+        display: none;
+    }
+    
+}
+@media (max-width: 350px) {
+    .menu {
+        display: none;
+    }
+    h2 {
+        font-size: 1em;
+    }
+}
+@media (max-width: 470px) {
+    header {
+        background-image: url("/img/fondo-header.jpg");
+        background-size: cover;
+    }
+}
+/* navegacion en tablets: */
+@media (min-width: 576px){
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 2;
+        box-shadow: 0px 6px 7px rgb(14 2 2);
+    }
+    .icono {
+        width: 40%;
+    }
+    .menu {
+        width: 60%;
+    }
+    .banner {
+        margin-top: 86px;
+    }
+    main section {
+        position: relative;
+        z-index: 1;
+    }
+    .producto {
+        width: 40%;
+        margin: 3px;
+        transition: all 450ms;
+        position: relative;
+        z-index: 1;
+    }
+    .producto:hover{
+        box-shadow : 5px 10px 10px rgb(100,100,100 );
+    }
+    
+    .descripcion {
+        color: white;
+        text-shadow: 1px 2px black;
+        font-size: 25px;
+        background-color: rgba(0,0,0,0.7);
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        text-align: center;
+        display: flex;
+        width: 100%;
+        height: 79%;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transition: all 450ms;
+    }
+    .descripcion:hover {
+        opacity: 1;
+        background-color: rgba(177, 14, 226, 0.5);
+    
+    }
+    .caracteristicas {
+        margin-bottom: 0;
+    }
+    .contenedor-productos {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    h2 {
+        font-size: 40px;
+    }
+
+}
+@media (max-width: 576px) {
+    .descripcion {
+        position: absolute;
+        bottom: 10px;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        padding: 0 0 0 15px;
+    }
+}
+/* navegacion en escritorio: */
+@media (min-width: 769px){
+    header {
+        font-size: 22px;
+    }
+    .menu ul li a {
+        transition: font-size 200ms;
+    }
+    .menu ul li a:hover {
+        font-size: 30px;
+    }
+    .producto {
+        max-width: 20%;
+    }
+    footer {
+        display: flex;
+        position: absolute;
+    }
+    footer section {
+        margin-bottom: 4%; 
+    }
+    footer .copyright {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-top: 10px;
+    }
+
+}
