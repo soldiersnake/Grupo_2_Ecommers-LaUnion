@@ -307,6 +307,8 @@ circle-check {
     padding: 40px 0;
     background-color: black;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+    position: absolute;
+    width: 100%;
   }
   
   .footer .social {

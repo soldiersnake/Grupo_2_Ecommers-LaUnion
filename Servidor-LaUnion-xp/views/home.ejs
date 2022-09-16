@@ -1,173 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <!-- HEAD -->
     <%- include('./partials/head.ejs') %>
-
 <body>
-
     <!-- HEADER -->
     <%- include('./partials/header.ejs') %>
-
     <div>
         <img class="banner" src="/img/img-home-banner.jpg">
     </div>
     <main>
-        <section class="biblioteca">
-            <h2>BIBLIOTECA</h2>
-            <hr>
-            <div class="contenedor-productos">
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/comic1.jpg" width="100">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio"> $6.770</p>
-                            <p class="descuento">40% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/comic2.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$230.000</p>
-                            <p class="descuento">20% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/comic3.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$70.500</p>
-                            <p class="descuento">10% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/comic4.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$23.200</p>
-                            <p class="descuento">5% OFF</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="juegos">
-            <h2>JUEGOS</h2>
-            <hr>
-            <div class="contenedor-productos">
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/juego1.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$6.770</p>
-                            <p class="descuento">40% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/juego2.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$230.000</p>
-                            <p class="descuento">20% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/juego3.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$70.500</p>
-                            <p class="descuento">10% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/juego4.jpg">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$23.200</p>
-                            <p class="descuento">5% OFF</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="figuras">
-            <h2>FIGURAS</h2>
-            <hr>
-            <div class="contenedor-productos">
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/figura1.png">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$6.770</p>
-                            <p class="descuento">40% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/figura2.png">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$230.000</p>
-                            <p class="descuento">20% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/figura3.png">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$70.500</p>
-                            <p class="descuento">10% OFF</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="producto">
-                    <p class="descripcion">Título del producto</p>
-                    <img src="/img/figura4.png">
-                    <div class="caracteristicas">
-                        <i class="fa-solid fa-basket-shopping circulo"></i>
-                        <div class="precio-descuento">
-                            <p class="precio">$23.200</p>
-                            <p class="descuento">5% OFF</p>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+        <% categories.forEach(category => { %> 
+            <section class="<%= category.name %>">
+                <h2><%= category.name.toUpperCase() %></h2>
+                <hr>
+                <div class="contenedor-productos">
+                    <% products.filter(producto =>producto.categoryId == category.id).forEach(producto => { %>
+                        <article class="producto">
+                            <p class="descripcion"><%= producto.name %></p>
+                            <img src="<%= producto.imagen %>" width="100">
+                            <div class="caracteristicas">
+                                <i class="fa-solid fa-basket-shopping circulo"></i>
+                                <div class="precio-descuento">
+                                    <p class="precio"><%= producto.price %></p>
+                                    <p class="descuento">40% OFF</p>
+                                </div>
+                            </div>
+                        </article>
+                    <% }) %>
+                </div>
+            </section>
+        <% }) %> 
     </main>
-    
     <!-- FOOTER -->
     <%- include('./partials/footer.ejs') %>
-
-
 </body>
 </html>
