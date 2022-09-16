@@ -1,3 +1,6 @@
+/*const productsList = require('../js/products');
+const categoiresList = require('../js/categories');*/
+
 const productsController = {
     detalle: function(req, res, next) {
         res.render('./products/detalle-producto');
