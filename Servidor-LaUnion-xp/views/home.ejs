@@ -1,37 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Union</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/home-style.css">
-</head>
+    <!-- HEAD -->
+    <%- include('./partials/head.ejs') %>
 
 <body>
-    <header>
-        <div class="icono">
-            <a href="/">
-                <img src="/img/logo.png">
-            </a>
-        </div>
-        <a href='#' class="hamburger-button">
-            <i class="fa-solid fa-bars"></i>
-        </a>
-        <nav class="menu">
-            <ul type="none">
-                <li><a href="#">Biblioteca</a></li>
-                <li><a href="#">Juegos</a></li>
-                <li><a href="#">Figuras</a></li>
-                <li><a href="#">Buscar</a></li>
-                <li><a href="/login">Login</a></li>
-                <li><a href="/register">Sign-Up</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- HEADER -->
+    <%- include('./partials/header.ejs') %>
+
     <div>
         <img class="banner" src="/img/img-home-banner.jpg">
     </div>
@@ -187,32 +164,10 @@
             </div>
         </section>
     </main>
-    <section class="footer">
-        <div class="social">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-snapchat"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
-  
-        <ul class="list">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Terms</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-        </ul>
-        <p class="copyright">Grupo 02 La-Unión @ 2022</p>
-    </section>
+    
+    <!-- FOOTER -->
+    <%- include('./partials/footer.ejs') %>
+
+
 </body>
 </html>
