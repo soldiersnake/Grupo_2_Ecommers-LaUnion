@@ -66,11 +66,7 @@ let products = [
     {
         id: 9,
         name: 'Dragonball Z Goku SSJ3',
-        description: {
-            peso: '250gr',
-            medidas: '30x28x20cm',
-            articulaciones: false
-        },
+        description: 'Es por ahora la fase final en la que un Saiyajin puro puede llegar por su propia cuenta. El individuo cuadruplica el poder de la fase 2, con el costo de desgastar sus reservas de energía, lo que causa que esta transformación sea poco estable. El cabello crece considerablemente, las pupilas se oscurecen, la región superior de las órbitas oculares se protruye ocultando las cejas, la piel se torna brillante y la voz un poco más grave, y la bioelectricidad de su aura se hace más notoria. La conducta no sufre cambios.',
         price: 150000,
         imagen: '/img/figura1.png',
         categoryId: 3
@@ -78,11 +74,7 @@ let products = [
     {
         id: 10,
         name: 'Saint Seiya armadura de bronce',
-        description: {
-            peso: '250gr',
-            medidas: '30x28x20cm',
-            articulaciones: true
-        },
+        description: 'Seiya es el Santo de bronce de Pegaso, el más valeroso protector de la diosa Atenea y el que nunca se rinde sin importar la situación, acostumbrado a levantarse siempre que cae en una batalla. Es la reencarnación del caballero de Pegaso que en la época mitológica logró herir el cuerpo de Hades y también de Tenma, un caballero que luchó en la anterior Guerra Santa, de hecho el caballero de Pegaso siempre es el mismo en todas su reencarnaciones y en la serie de Lost Canvas es el aprendiz de Dohko de Libra.',
         price: 120000,
         imagen: '/img/figura2.png',
         categoryId: 3
@@ -90,11 +82,7 @@ let products = [
     {
         id: 11,
         name: 'Neon genesis evangelion Eva-01',
-        description: {
-            peso: '250gr',
-            medidas: '30x28x20cm',
-            articulaciones: false
-        },
+        description: 'es el primer prototipo Evangelion de la serie creado especialmente para el combate, y es pilotado por Shinji Ikari. A diferencia de los demás EVA, que son creados a partir de Adán, la unidad 01 es creada a partir de Lilith, y en ella reside el alma de Yui Ikari, la madre de Shinji, como consecuencia de un experimento de contacto fallido. A causa de esto, la unidad entra frecuentemente en modo berserk cuando su piloto es incapacitado, revelando capacidades superiores a las del resto de Evangelions. La unidad 01 toma parte en la destrucción de la mayor parte de los Ángeles de la serie.',
         price: 150000,
         imagen: '/img/figura3.png',
         categoryId: 3
@@ -102,11 +90,7 @@ let products = [
     {
         id: 12,
         name: 'Star Wars Darth Maul',
-        description: {
-            peso: '250gr',
-            medidas: '30x28x20cm',
-            articulaciones: true
-        },
+        description: 'Darth Maul fue el aprendiz de Darth Sidious, quien le entrenó hasta llegar a ser un Lord Sith. Es un guerrero formidable, ágil y con un cerebro ingenioso, que lucha con una ferocidad amenazadora, Darth Sidious lo usó para hacer el trabajo sucio. Como arma porta un sable láser de doble hoja y de color rojo. Aunque cayó en batalla contra Obi-Wan Kenobi, el zabrak de Dathomir resultaría mucho más difícil de destruir de lo que originalmente se creía...',
         price: 250000,
         imagen: '/img/figura4.png',
         categoryId: 3

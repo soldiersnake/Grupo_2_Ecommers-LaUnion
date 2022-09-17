@@ -1,12 +1,12 @@
-const productsList = require('../js/products');
-const categoiresList = require('../js/categories');
+let products = require('../js/products');
 
 
 const productsController = {
     detalle: function(req, res, next) {
-        console.log(req.params.id);
-        res.render('./products/detalle-producto');
-
+        let productFound = products.find(producto => {
+            return producto.id == req.params.id
+        });
+        res.render('./products/detalle-producto', {product:productFound});
     },
     carrito: function(req, res, next) {
         res.render('./products/carrito');

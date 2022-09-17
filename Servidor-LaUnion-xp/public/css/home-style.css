@@ -88,6 +88,10 @@ main {
     flex-direction: column;
     margin-bottom: 20px;
 }
+.linkProducto {
+    text-decoration: none;
+    color: black;
+}
 .producto {
     margin: 10px;
     box-shadow: none;

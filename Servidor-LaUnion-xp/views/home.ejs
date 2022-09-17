@@ -16,15 +16,17 @@
                 <div class="contenedor-productos">
                     <% products.filter(producto =>producto.categoryId == category.id).forEach(producto => { %>
                         <article class="producto">
-                            <p class="descripcion"><%= producto.name %></p>
-                            <img src="<%= producto.imagen %>" width="100">
-                            <div class="caracteristicas">
-                                <i class="fa-solid fa-basket-shopping circulo"></i>
-                                <div class="precio-descuento">
-                                    <p class="precio"><%= producto.price %></p>
-                                    <p class="descuento">40% OFF</p>
+                            <a href="/products/detalle/<%= producto.id %> " class="linkProducto">
+                                <p class="descripcion"><%= producto.name %></p>
+                                <img src="<%= producto.imagen %>" width="100">
+                                <div class="caracteristicas">
+                                    <i class="fa-solid fa-basket-shopping circulo"></i>
+                                    <div class="precio-descuento">
+                                        <p class="precio"><%= producto.price %></p>
+                                        <p class="descuento">40% OFF</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </article>
                     <% }) %>
                 </div>

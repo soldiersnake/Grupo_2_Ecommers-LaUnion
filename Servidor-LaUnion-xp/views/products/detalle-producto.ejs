@@ -15,12 +15,12 @@
   <main>
     <div class="contenedor">
       <div class="img-contenedor">
-        <img id="producto" src="/img/spiderman.jpg" alt="spiderman">
+        <img id="producto" src="<%= product.imagen %> ">
       </div>
       <div class="description">
         <div class="titulo-descripcion">
-          <h3>Spiderman edicion Gold</h3>
-          <p>Coleccion limitada de unas de las artes mas prestigiadas de stanLee</p>
+          <h3><%= product.name %></h3>
+          <p>Aprovecha uno de los articulos coleccionables mas deseado por todos</p>
           <a href="#">otro producto de misma coleccion</a>
           <br>
           <a href="#">otro producto del mismo autor</a>
@@ -28,20 +28,20 @@
           <button class="button-quiero-coleccion">Si quiero inscribirme en esta coleccion</button>
         </div>
         <div class="especificacion">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repudiandae nam quisquam laboriosam,
-            pariatur ratione blanditiis nesciunt aut molestiae quod repellat minima optio ex quaerat excepturi quo illo
-            perspiciatis dignissimos.</p>
+          <p><%= product.description %> </p>
         </div>
+        <!--
         <div class="medidas">
           <p>Ancho: <span>170mm</span></p>
           <p>Largo: <span>270mm</span></p>
           <p>Peso: <span>250gr</span></p>
         </div>
+        -->
         <div>
           <button class="button-preventa">PREVENTA</button>
         </div>
         <div>
-          <span class="precio-regular">7,29€ </span><span class="precio-oferta">5,99€</span>
+          <span class="precio-regular"><%= product.price %>  </span><span class="precio-oferta">5,99€</span>
         </div>
         <div>
           <button class="button-stock">Si, quiero que me avises cuando haya Stock</button>
