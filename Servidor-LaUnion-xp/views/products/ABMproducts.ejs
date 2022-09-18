@@ -6,6 +6,7 @@
   <body>
     <!-- HEADER -->
     <%- include('../partials/header.ejs') %>
+    <link rel="stylesheet" href="/css/ABMproducts.css">
 
     <div class="main__container">
         <form class="main__form" action="#" method="PUT">
@@ -25,7 +26,7 @@
             <label>Seleccione imagen de articulo</label>
          <input type="file" name="articulo" accept=".jpg" multiple>
           </div>
-          <div>
+          <div class="Category">
             <select name="Category ID">
                 <option value="1">Libros</option>
                 <option value="2">Juegos</option>
