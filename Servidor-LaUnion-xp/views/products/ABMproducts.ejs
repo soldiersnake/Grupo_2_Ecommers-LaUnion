@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <%- include('../partials/headProducts.ejs') %>
+
+  <body>
+    <!-- HEADER -->
+    <%- include('../partials/header.ejs') %>
+
+    <div class="main__container">
+        <form class="main__form" action="#" method="PUT">
+          <div>
+            <input type="text" class="text-box" id="Numero de ID" name="Numero de ID" placeholder="Ingrese numero de ID" required>
+          </div>
+          <div>
+            <input type="text" class="text-box" id="Name" name="Name" placeholder="Ingrese nombre del producto" required>
+          </div>
+          <div>
+            <input type="text" class="text-box" id="Description" name="Description" placeholder="Descripcion del producto" required>
+          </div>
+          <div>
+            <input type="text" class="text-box" id="Price" name="Price" placeholder="Precio total" required>
+          </div>
+          <div>
+            <label>Seleccione imagen de articulo</label>
+         <input type="file" name="articulo" accept=".jpg" multiple>
+          </div>
+          <div>
+            <select name="Category ID">
+                <option value="1">Libros</option>
+                <option value="2">Juegos</option>
+                <option value="3">figuras</option>
+              </select>
+          </div>
+          
+    
+      <!-- FOOTER -->
+      <%- include('../partials/footer.ejs') %>
+    
+    </body>
+    
+    </html>

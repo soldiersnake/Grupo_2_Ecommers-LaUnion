@@ -12,6 +12,9 @@ const productsController = {
             return producto.id == req.params.id
         });
         res.render('./products/carrito', {product:productToBuy});
+    },
+    ABMproducts: function(req, res) {
+        res.render("./products/ABMproducts");
     }
 
 }
