@@ -17,51 +17,15 @@
       <div class="contenedor-carrito">
         
         <div class="img-contenedor-carrito">
-          <img id="producto" src="/img/spiderman.jpg" alt="spiderman">
+          <img id="producto" src="<%= product.imagen %>" alt="<%= product.name %>">
         </div>
         <div class="description-carrito">
           <div class="titulo-descripcion-carrito">
-            <h3>Spiderman edicion Gold</h3>
-            <p>Coleccion limitada de unas de las artes mas prestigiadas de stanLee</p>
+            <h3><%= product.name %></h3>
+            <p>Aprovecha uno de los articulos coleccionables mas deseado por todos</p>
           </div>
           <div>
-            <span class="precio-regular">7,29€ </span><span class="precio-oferta">5,99€</span>
-            <div class="cantidad-producto">
-              <br>
-              <label for="1">Cantidad: </label>
-              <input type="number" name="1" id="1" min="1">
-              <button class="button-quitar">X</button>
-            </div>
-          </div>
-        </div>
-        <div class="img-contenedor-carrito">
-          <img id="producto" src="/img/spiderman.jpg" alt="spiderman">
-        </div>
-        <div class="description-carrito">
-          <div class="titulo-descripcion-carrito">
-            <h3>Spiderman edicion Gold</h3>
-            <p>Coleccion limitada de unas de las artes mas prestigiadas de stanLee</p>
-          </div>
-          <div>
-            <span class="precio-regular">7,29€ </span><span class="precio-oferta">5,99€</span>
-            <div class="cantidad-producto">
-              <br>
-              <label for="1">Cantidad: </label>
-              <input type="number" name="1" id="1" min="1">
-              <button class="button-quitar">X</button>
-            </div>
-          </div>
-        </div>
-        <div class="img-contenedor-carrito">
-          <img id="producto" src="/img/spiderman.jpg" alt="spiderman">
-        </div>
-        <div class="description-carrito">
-          <div class="titulo-descripcion-carrito">
-            <h3>Spiderman edicion Gold</h3>
-            <p>Coleccion limitada de unas de las artes mas prestigiadas de stanLee</p>
-          </div>
-          <div>
-            <span class="precio-regular">7,29€ </span><span class="precio-oferta">5,99€</span>
+            <span class="precio-regular">$ <%= product.price %> </span><span class="precio-oferta">5,99€</span>
             <div class="cantidad-producto">
               <br>
               <label for="1">Cantidad: </label>

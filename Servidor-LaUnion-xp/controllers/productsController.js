@@ -1,6 +1,5 @@
 let products = require('../js/products');
 
-
 const productsController = {
     detalle: function(req, res, next) {
         let productFound = products.find(producto => {
@@ -9,8 +8,11 @@ const productsController = {
         res.render('./products/detalle-producto', {product:productFound});
     },
     carrito: function(req, res, next) {
-        res.render('./products/carrito');
-      }
+        let productToBuy = products.find(producto => {
+            return producto.id == req.params.id
+        });
+        res.render('./products/carrito', {product:productToBuy});
+    }
 
 }
 

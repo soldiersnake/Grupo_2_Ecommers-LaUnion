@@ -5,6 +5,6 @@ var router = express.Router();
 /* GET home page. */
 router.get('/detalle/:id', productsController.detalle);
 
-router.get('/carrito', productsController.carrito);
+router.get('/carrito/:id', productsController.carrito);
 
 module.exports = router;

@@ -20,9 +20,13 @@
                                 <p class="descripcion"><%= producto.name %></p>
                                 <img src="<%= producto.imagen %>" width="100">
                                 <div class="caracteristicas">
-                                    <i class="fa-solid fa-basket-shopping circulo"></i>
+                                    <a href="/products/carrito/<%= producto.id %> " class="linkCarrito">
+                                        <abbr title="Comprar">
+                                            <i class="fa-solid fa-basket-shopping circulo"></i>
+                                        </abbr>
+                                    </a>
                                     <div class="precio-descuento">
-                                        <p class="precio"><%= producto.price %></p>
+                                        <p class="precio">$ <%= producto.price %></p>
                                         <p class="descuento">40% OFF</p>
                                     </div>
                                 </div>

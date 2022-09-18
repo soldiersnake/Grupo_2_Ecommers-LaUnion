@@ -106,13 +106,13 @@ header img{
 
 .img-contenedor-carrito{
     display: inline;
-    width: 50%;
+    width: 80%;
     margin: 10px;
     text-align: center;
 }
 
 #producto{
-    width: 90%;
+    width: 100%;
 }
 
 .description{
