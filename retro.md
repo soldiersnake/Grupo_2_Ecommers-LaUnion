@@ -1,4 +1,4 @@
-# Restrospectiva Sprint 1
+# Restrospectiva Sprint 3
 - ¿Qué ha salido bien? 
 > La idea es creativa y tiene mucho potencial para desarrollar, la cantidad de sitios para inspirarnos es infinita. Pudimos establecer una pagina con una distribución esteticamente adecuada en el papel y tratamos de llevarla a codigo de la manera mas fiel a los diseños realizados
 
@@ -6,7 +6,7 @@
 > Tuvimos diversos conflictos personales que entorpecieron el trabajo en grupo y la organizacion del sprint, lo cual derivó en una pequeña sobrecarga en algunos integrantes del grupo. La diferencia horaria y las diferentes situaciones personales también nos jugo una mala pasada para poder reunirnos con periodicidad.
 
 - ¿Qué hicimos bien?
-> Los mas fuertes en código se dedicaron a ello y los demás la elección de tipografías, colores y wireframe. Nunca desestimamos la idea u opinan del otro ni dejamos atras cualquier idea que pudiese impulsar el proyecto
+> Hubo comunicación en el grupo de trabajo, se dividieron las cargas segun las habilidades de cada integrante
 
 - ¿Qué se puede mejorar?
 > Debemos mejorar la distribución de las tareas, lograr al menos reunirnos con una buena frecuencia semanal  superando la barrera horaria y priorizar el cumplimento de las actividades de playground con el fin de dedicarle un espacio al cumplimento del proyecto en los tiempos establecidos. 
