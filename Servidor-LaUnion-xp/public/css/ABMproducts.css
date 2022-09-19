@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .main__container {
     text-decoration: none;
     color: white;
@@ -16,9 +15,29 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    
-    
-    
+}
+
+.Contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    margin: 7%;
+}
+
+.main__form{
+    border: 2px solid #2f528f;
+    border-radius: 10px;
+    background-color: rgba(1000, 1000, 1000, 0.75);
+    padding: 15px;
+    text-align: center;
+    margin: 20px;
+}
+
+.main__form input{
+    border-radius: 5px;
+    padding: 3px;
+    margin: 3px;
 }
 
 input .main__container{
@@ -28,16 +47,44 @@ input .main__container{
 }
 
 
-.list { 
+.list {
     padding: 40px 15px;
     background-color: black;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     bottom: auto;
     flex: end;
-    
+
 }
 
-.Category {
-    
+.enviar-form-abm{
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: larger;
 }
-   
+
+.enviar-form-abm:hover{
+    background-color: blueviolet;
+    color: yellow;
+}
+
+.editar-form-abm{
+    background-color: rgb(194, 204, 86);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: larger;
+}
+
+.editar-form-abm:hover{
+    background-color: blueviolet;
+    color: black;
+    border: solid 2px red;
+}
