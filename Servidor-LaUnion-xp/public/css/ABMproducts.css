@@ -11,7 +11,8 @@
     text-shadow: 1px 2px black;
     cursor: pointer;
     transition: color 200ms;
-    background-image: url("/img/fondo-header.jpg");
+    background-image: url('/img/erik-mclean-LSPUdV6IWsY-unsplash.jpg');
+    background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -46,6 +47,16 @@ input .main__container{
     margin: 20px;
 }
 
+.labelImagen{
+    color: black;
+    text-shadow: none;
+    font-weight: 1000;
+}
+.filePhoto input[type="file"]{
+    display: block;
+    margin: auto;
+    color: black;
+}
 
 .list {
     padding: 40px 15px;
