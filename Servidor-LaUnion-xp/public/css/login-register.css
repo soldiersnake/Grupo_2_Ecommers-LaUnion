@@ -13,7 +13,6 @@ header {
     background-size: contain;
     top: 0;
 }
-
 .icono {
     width: 100%;
     text-align: center;
@@ -84,6 +83,7 @@ header {
 .formulario {
     width: 50%;
 }
+
 h2 {
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -290,6 +290,7 @@ circle-check {
     .formulario {
         width: 30%;
         margin-right: 10%;
+        padding-bottom: 30px;
     }
 }
 
