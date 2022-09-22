@@ -10,7 +10,7 @@ router.get('/carrito/:id', productsController.carrito);
 router.get('/create', productsController.create);
 router.post('/create', productsController.create);
 
-router.get('/edit', productsController.edit);
-router.post('/edit', productsController.edit);
+router.get('/edit/:id', productsController.edit);
+router.put('/edit/:id', productsController.update);
 
 module.exports = router;

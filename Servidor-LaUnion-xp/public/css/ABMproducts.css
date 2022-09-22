@@ -15,7 +15,6 @@
     background-size: cover;
     position: absolute;
     width: 100%;
-    height: 100%;
 }
 
 .Contenedor-formulario {
@@ -35,10 +34,29 @@
     margin: 20px;
 }
 
-.main__form input{
+.tituloProducto{
+    color: black;
+    font-weight: 900;
+    text-shadow: none;
+    margin-bottom: 10px;
+}
+
+.inputFormulario input{
     border-radius: 5px;
     padding: 3px;
-    margin: 3px;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.Contenedor-formulario textarea{
+    width: 80%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
 }
 
 input .main__container{
@@ -51,11 +69,13 @@ input .main__container{
     color: black;
     text-shadow: none;
     font-weight: 1000;
+    margin: 10px;
 }
 .filePhoto input[type="file"]{
     display: block;
     margin: auto;
     color: black;
+    margin-bottom: 10px;
 }
 
 .list {

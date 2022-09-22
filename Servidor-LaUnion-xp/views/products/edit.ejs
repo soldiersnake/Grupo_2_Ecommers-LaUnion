@@ -12,23 +12,22 @@
       <div class="Contenedor-formulario">
         <form class="main__form" action="#" method="PUT">
           <h2>Editar producto</h2>
-          <div>
-            <input type="text" class="text-box" id="Numero de ID" name="Numero de ID" placeholder="Ingrese numero de ID" required>
+          <h3 class="tituloProducto"><%= product.name %></h3>
+          <div class="inputFormulario">
+            <input type="text" class="text-box" id="Name" name="Name" value="<%= product.name %>" required>
+          </div>
+          <div class="inputFormulario">
+            <input type="text" class="text-box" id="Price" name="Price" value="<%= product.price %>" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="Name" name="Name" placeholder="Ingrese nombre del producto" required>
-          </div>
-          <div>
-            <input type="text" class="text-box" id="Description" name="Description" placeholder="Descripcion del producto" required>
-          </div>
-          <div>
-            <input type="text" class="text-box" id="Price" name="Price" placeholder="Precio total" required>
+            <textarea name="" id="" cols="30" rows="10"><%= product.description %></textarea>
           </div>
           <div class="filePhoto">
             <label class="labelImagen">Seleccione imagen de articulo</label>
          <input  type="file" name="articulo" accept=".jpg" multiple>
           </div>
           <div class="Category">
+            <label class="tituloProducto" for="Category ID">Categoria</label>
             <select name="Category ID">
                 <option value="1">Libros</option>
                 <option value="2">Juegos</option>

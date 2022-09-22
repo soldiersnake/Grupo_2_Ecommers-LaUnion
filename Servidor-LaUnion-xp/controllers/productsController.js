@@ -9,7 +9,7 @@ const productsController = {
     },
     carrito: function(req, res, next) {
         let productToBuy = products.find(producto => {
-            return producto.id == req.params.id
+            return producto.id == req.params.id;
         });
         res.render('./products/carrito', {product : productToBuy});
     },
@@ -17,8 +17,14 @@ const productsController = {
         res.render("./products/create");
     },
     edit: function(req, res) {
-        res.render("./products/edit");
-    }
+        let productToEdit = products.find(producto => {
+            return producto.id == req.params.id;
+        });
+        res.render("./products/edit", { product : productToEdit});
+    },
+    // update: function(){
+
+    // }
 
 }
 
