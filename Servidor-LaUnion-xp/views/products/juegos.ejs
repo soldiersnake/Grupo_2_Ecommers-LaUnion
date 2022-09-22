@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('../partials/head.ejs') %>
+<body>
+    <!-- HEADER -->
+    <%- include('../partials/header.ejs') %>
+    <div>
+        <img class="banner" src="/img/img-home-banner.jpg">
+    </div>
+    <main>
+        <% categories.filter( category => category.id == 2 ).forEach(category => { %> 
+            <section class="<%= category.name %>">
+                <h2><%= category.name.toUpperCase() %></h2>
+                <hr>
+                <div class="contenedor-productos">
+                    <% products.filter(producto =>producto.categoryId == category.id).forEach(producto => { %>
+                        <article class="producto">
+                            <a href="/products/detalle/<%= producto.id %> " class="linkProducto">
+                                <p class="descripcion"><%= producto.name %></p>
+                                <img src="<%= producto.imagen %>" width="100">
+                                <div class="caracteristicas">
+                                    <a href="/products/carrito/<%= producto.id %> " class="linkCarrito">
+                                        <abbr title="Comprar">
+                                            <i class="fa-solid fa-basket-shopping circulo"></i>
+                                        </abbr>
+                                    </a>
+                                    <div class="precio-descuento">
+                                        <p class="precio">$ <%= producto.price %></p>
+                                        <p class="descuento">40% OFF</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    <% }) %>
+                </div>
+            </section>
+        <% }) %> 
+    </main>
+    <!-- FOOTER -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

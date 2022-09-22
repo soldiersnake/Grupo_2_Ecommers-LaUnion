@@ -1,4 +1,5 @@
 let products = require('../js/products');
+let categories = require('../js/categories');
 
 const productsController = {
     detalle: function(req, res, next) {
@@ -7,6 +8,17 @@ const productsController = {
         });
         res.render('./products/detalle-producto', {product : productFound});
     },
+    
+    biblioteca: function(req, res){
+        res.render('./products/biblioteca', {products, categories});
+    },
+    juegos: function(req, res){
+        res.render('./products/juegos', {products, categories});
+    },
+    figuras: function(req, res){
+        res.render('./products/figuras', {products, categories});
+    },
+
     carrito: function(req, res, next) {
         let productToBuy = products.find(producto => {
             return producto.id == req.params.id;
