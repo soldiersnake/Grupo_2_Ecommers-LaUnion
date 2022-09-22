@@ -13,8 +13,11 @@ const productsController = {
         });
         res.render('./products/carrito', {product : productToBuy});
     },
-    ABMproducts: function(req, res) {
-        res.render("./products/ABMproducts");
+    create: function(req, res) {
+        res.render("./products/create");
+    },
+    edit: function(req, res) {
+        res.render("./products/edit");
     }
 
 }
