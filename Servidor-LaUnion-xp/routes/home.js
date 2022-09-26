@@ -1,10 +1,26 @@
 var express = require('express');
-let products = require('../js/products');
-let categories = require('../js/categories');
+const fs = require('fs');
+const path = require('path');
 var router = express.Router();
 
-/* GET home page. */
+//funcion para enlistar todos los productos
+function findAllProducts(){
+  const jsonDataProducts = fs.readFileSync(path.join(__dirname, '../data/products.json'));
+  const products = JSON.parse(jsonDataProducts);
+  return products;
+}
+//funcion para enlistar todos las categorias
+function findAllCategories(){
+  const jsonDataCategories = fs.readFileSync(path.join(__dirname, '../data/categories.json'));
+  const categories = JSON.parse(jsonDataCategories);
+  return categories;
+}
+
+// Enlistar productos
 router.get('/', function(req, res, next) {
+  const products = findAllProducts();
+  const categories = findAllCategories();
+  console.log(products);
   res.render('home', {products,categories});
 });
 

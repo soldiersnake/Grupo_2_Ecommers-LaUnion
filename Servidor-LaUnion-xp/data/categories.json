@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "biblioteca",
+        "description": "Reunimos la mejor colección de comics, mangas y libros dedicados a la cultura geek."
+    },
+    {
+        "id": 2,
+        "name": "juegos",
+        "description": "Disponemos de una amplia variedad de videojuegos para todas las consolas."
+    },
+    {
+        "id": 3,
+        "name": "figuras",
+        "description": "Encuentra las figuras de acción de tus persojanes favoritos en el mismo lugar."
+    }
+]

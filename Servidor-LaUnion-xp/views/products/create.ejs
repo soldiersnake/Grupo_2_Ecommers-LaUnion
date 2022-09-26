@@ -10,27 +10,24 @@
 
     <div class="main__container">
       <div class="Contenedor-formulario">
-        <form class="main__form" action="#" method="PUT">
+        <form class="main__form" action="/products/create" enctype="multipart/form-data" method="post">
           <h2>Crear producto</h2>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="Name" name="Name" placeholder="Ingrese nombre del producto" required>
+            <input type="text" class="text-box" id="name" name="name" placeholder="Ingrese nombre del producto" required>
           </div>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="Description" name="Description" placeholder="Descripcion del producto" required>
-          </div>
-          <div class="inputFormulario">
-            <input type="text" class="text-box" id="Price" name="Price" placeholder="Precio total" required>
+            <input type="text" class="text-box" id="price" name="price" placeholder="Precio total" required>
           </div>
           <div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese la descripción del producto"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10" placeholder="Ingrese la descripción del producto"></textarea>
           </div>
           <div class="filePhoto">
             <label class="labelImagen">Seleccione imagen de articulo</label>
-         <input type="file" name="articulo" accept=".jpg" multiple>
+         <input type="file" name="image">
           </div>
           <div class="Category">
             <label class="tituloProducto" for="Category ID">Categoria</label>
-            <select name="Category ID">
+            <select name="categoryId">
                 <option value="1">Libros</option>
                 <option value="2">Juegos</option>
                 <option value="3">figuras</option>

@@ -10,31 +10,36 @@
 
     <div class="main__container">
       <div class="Contenedor-formulario">
-        <form class="main__form" action="#" method="PUT">
+        <form class="main__form" action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="post">
           <h2>Editar producto</h2>
           <h3 class="tituloProducto"><%= product.name %></h3>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="Name" name="Name" value="<%= product.name %>" required>
+            <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" required>
           </div>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="Price" name="Price" value="<%= product.price %>" required>
+            <input type="text" class="text-box" id="price" name="price" value="<%= product.price %>" required>
           </div>
           <div>
-            <textarea name="" id="" cols="30" rows="10"><%= product.description %></textarea>
+            <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
           </div>
+          <!--
           <div class="filePhoto">
             <label class="labelImagen">Seleccione imagen de articulo</label>
-         <input  type="file" name="articulo" accept=".jpg" multiple>
+         <input  type="file" name="image" id="image">
           </div>
+          -->
           <div class="Category">
-            <label class="tituloProducto" for="Category ID">Categoria</label>
-            <select name="Category ID">
+            <label class="tituloProducto" for="categoryId">Categoria</label>
+            <select name="categoryId">
                 <option value="1">Libros</option>
                 <option value="2">Juegos</option>
                 <option value="3">figuras</option>
               </select>
           </div>
           <button class="editar-form-abm" type="submit">Editar</button>
+        </form>
+        <form action="/products/delete/<%= product.id %>?_method=delete" method="post">
+          <button class="editar-form-abm">Eliminar</button>
         </form>
       </div>
           
