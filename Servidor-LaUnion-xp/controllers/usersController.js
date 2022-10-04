@@ -41,8 +41,6 @@ const usersController = {
           imgPerfil: req.file.filename,
         };
 
-        
-
         if(resultValidation.errors.length > 0 ){
           users.push(newUsers);
           writeFile(users);

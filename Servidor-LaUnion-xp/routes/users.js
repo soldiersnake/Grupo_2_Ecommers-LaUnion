@@ -29,7 +29,6 @@ const validation = [
 
 /* GET users listing. */
 router.get('/login', usersController.login);
-
 // formulario registro
 router.get('/register', usersController.register);
 // Procesar el registro
