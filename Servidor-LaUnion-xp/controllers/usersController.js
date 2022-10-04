@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 //funcion para enlistar todos los users
 function findAllUsers(){
@@ -24,6 +25,9 @@ const usersController = {
         res.render('./users/register');
       },
       RegisterUser: (req, res) => {
+        // requerir el validador
+        const resultValidation = validationResult(req);
+        
         //trae los usuarios
         const users = findAllUsers();
         // utilizamos los campos del formulario para crear el nuevo objeto/usuario
@@ -40,7 +44,10 @@ const usersController = {
         users.push(newUsers);
         writeFile(users);
 
-        res.redirect('/');
+        if(resultValidation.errors.length > 0 ){
+
+          res.render('/');
+        }
       },
 }
 
