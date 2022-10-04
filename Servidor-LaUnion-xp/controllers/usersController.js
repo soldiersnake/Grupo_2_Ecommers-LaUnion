@@ -41,12 +41,12 @@ const usersController = {
           imgPerfil: req.file.filename,
         };
 
-        users.push(newUsers);
-        writeFile(users);
+        
 
         if(resultValidation.errors.length > 0 ){
-
-          res.render('/');
+          users.push(newUsers);
+          writeFile(users);
+          res.redirect('/users/login');
         }
       },
 }
