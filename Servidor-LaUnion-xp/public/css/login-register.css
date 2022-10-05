@@ -86,7 +86,6 @@ header {
 
 .ErrFormulario{
     color: red;
-    margin: 5px;
     font-weight: 700;
 }
 
@@ -119,6 +118,12 @@ h2 {
 .inputIcon {
     position: relative;
     width: 100%;
+}
+input::placeholder{
+    color: red;
+    font-weight: 700;
+    font-style: italic;
+    background-color: #fecc4f;
 }
 .inputBx input {
     width: 100%;

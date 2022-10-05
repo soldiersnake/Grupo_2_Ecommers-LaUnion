@@ -15,7 +15,7 @@
         <div class="espacio-formulario">
             <div class="formulario">
                 <h2>Registro</h2>
-                <% if(locals.errors) {%> 
+                <!-- <% if(locals.errors) {%> 
                     <div class="ErrFormulario">
                         <% for( oneError in errors ) { %>
                             <ul>
@@ -23,48 +23,60 @@
                             </ul>
                         <% } %>  
                     </div>
-                    <% } %> 
+                    <% } %>  -->
                 <form action="/users/register" enctype="multipart/form-data" method="post">
                     <div class="inputBx">
+                        <% if(locals.errors && errors.user) {%> 
                         <label>Usuario</label>
                         <div class="inputIcon">
-                            <input type="text" name="user" id="user">
+                            <input type="text" name="user" id="user" placeholder="<%= errors.user.msg %>">
                         </div>
+                        <% } %> 
                     </div>
 
                     <div class="inputBx">
+                        <% if(locals.errors && errors.name) {%> 
                         <label>Nombre(s)</label>
                         <div class="inputIcon">
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" placeholder="<%= errors.name.msg %>">
                         </div>
+                        <% } %> 
                     </div>
 
                     <div class="inputBx">
+                        <% if(locals.errors && errors.lastName) {%> 
                         <label>Apellido(s)</label>
                         <div class="inputIcon">
-                            <input type="text" name="lastName" id="lastName">
+                            <input type="text" name="lastName" id="lastName" placeholder="<%= errors.lastName.msg %>">
                         </div>
+                        <% } %> 
                     </div>
 
                     <div class="inputBx">
+                        <% if(locals.errors && errors.email) {%> 
                         <label>Correo electrónico</label>
                         <div class="inputIcon">
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" placeholder="<%= errors.email.msg %>">
                         </div>
+                        <% } %> 
                     </div>
 
                     <div class="inputBx">
+                        <% if(locals.errors && errors.password) {%> 
                         <label>Contraseña</label>
                         <div class="inputIcon">
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" placeholder="<%= errors.password.msg %>">
                         </div>
+                        <% } %> 
                     </div>
 
                     <div class="inputBx">
+                        <% if(locals.errors && errors.confirmPassword) {%> 
                         <label>Confirmar contraseña</label>
                         <div class="inputIcon">
-                            <input type="password" name="confirmPassword" id="confirmPassword">
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="<%= errors.confirmPassword.msg %>">
                         </div>
+                        <% } %> 
                     </div>
 
                     <div class="inputBx">

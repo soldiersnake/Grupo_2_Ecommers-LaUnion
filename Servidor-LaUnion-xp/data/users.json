@@ -7,14 +7,5 @@
         "password": "mariano",
         "confirmPassword": "mariano",
         "imgPerfil": "avatar1664579184195.png"
-    },
-    {
-        "user": "mariano",
-        "name": "Mariano Damian",
-        "lastName": "Macias Gandulfo",
-        "email": "mariano.maciasgandulfo@gmail.com",
-        "password": "123",
-        "confirmPassword": "123",
-        "imgPerfil": "avatar1664950028126.jpg"
     }
 ]
