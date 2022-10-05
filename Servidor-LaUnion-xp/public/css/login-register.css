@@ -84,6 +84,12 @@ header {
     width: 50%;
 }
 
+.ErrFormulario{
+    color: red;
+    margin: 5px;
+    font-weight: 700;
+}
+
 h2 {
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
