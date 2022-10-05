@@ -7,5 +7,23 @@
         "password": "mariano",
         "confirmPassword": "mariano",
         "imgPerfil": "avatar1664579184195.png"
+    },
+    {
+        "user": "mariano",
+        "name": "Mariano",
+        "lastName": "Gandulfo",
+        "email": "mariano.maciasgandulfo@gmail.com",
+        "password": "mariano",
+        "confirmPassword": "asd",
+        "imgPerfil": "avatar1664930937595.jpg"
+    },
+    {
+        "user": "mariano",
+        "name": "Mariano",
+        "lastName": "Gandulfo",
+        "email": "mariano.maciasgandulfo@gmail.com",
+        "password": "mariano",
+        "confirmPassword": "123123",
+        "imgPerfil": "avatar1664931006336.jpg"
     }
 ]

@@ -36,12 +36,14 @@ const usersController = {
           name: req.body.name,
           lastName: req.body.lastName,
           email: req.body.email,
-          password: req.body.password1,
-          confirmPassword: req.body.password2,
+          password: req.body.password,
+          confirmPassword: req.body.confirmPassword,
           imgPerfil: req.file.filename,
         };
 
         if(resultValidation.errors.length > 0 ){
+          return res.render('./users/register', {errors : resultValidation.mapped()})
+        }else{
           users.push(newUsers);
           writeFile(users);
           res.redirect('/users/login');
