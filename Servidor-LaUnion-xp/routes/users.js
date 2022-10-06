@@ -22,9 +22,17 @@ const validation = [
     body('user').notEmpty().withMessage('El campo Usuario es obligatorio'),
     body('name').notEmpty().withMessage('El campo Nombre es obligatorio'),
     body('lastName').notEmpty().withMessage('El campo Apellido es obligatorio'),
-    body('email').notEmpty().withMessage('El campo Email es obligatorio'),
+    body('email')
+        .notEmpty().withMessage('El campo Email es obligatorio').bail()
+        .isEmail().withMessage('Debes de escribir un formato de correo Valido'),
     body('password').notEmpty().withMessage('El campo contraseña es obligatorio'),
     body('confirmPassword').notEmpty().withMessage('El campo confirmar contraseña es obligatorio'),
+    // body('avatar').custom((value, { req }) => {
+    //     let file = req.file;
+    //     if(!file){
+    //         throw new Error('Tienes q subir una imagen');
+    //     }
+    // })
 ];
 
 /* GET users listing. */
