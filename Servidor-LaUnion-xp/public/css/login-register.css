@@ -84,6 +84,11 @@ header {
     width: 50%;
 }
 
+.ErrFormulario{
+    color: red;
+    font-weight: 700;
+}
+
 h2 {
     text-align: center;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
@@ -113,6 +118,16 @@ h2 {
 .inputIcon {
     position: relative;
     width: 100%;
+}
+input::placeholder{
+    color: red;
+    font-weight: 700;
+    font-style: italic;
+}
+.msgError{
+    font-size: 10px;
+    color: red;
+    font-weight: 700;
 }
 .inputBx input {
     width: 100%;
