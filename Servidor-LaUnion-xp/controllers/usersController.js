@@ -42,7 +42,7 @@ const usersController = {
         };
 
         if(resultValidation.errors.length > 0 ){
-          return res.render('./users/register', {errors : resultValidation.mapped()})
+          return res.render('./users/register', { errors : resultValidation.mapped(), oldData: req.body })
         }else{
           users.push(newUsers);
           writeFile(users);

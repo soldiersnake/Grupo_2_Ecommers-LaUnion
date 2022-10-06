@@ -123,7 +123,11 @@ input::placeholder{
     color: red;
     font-weight: 700;
     font-style: italic;
-    background-color: #fecc4f;
+}
+.msgError{
+    font-size: 10px;
+    color: red;
+    font-weight: 700;
 }
 .inputBx input {
     width: 100%;
