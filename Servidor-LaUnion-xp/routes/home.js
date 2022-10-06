@@ -20,7 +20,6 @@ function findAllCategories(){
 router.get('/', function(req, res, next) {
   const products = findAllProducts();
   const categories = findAllCategories();
-  console.log(products);
   res.render('home', {products,categories});
 });
 

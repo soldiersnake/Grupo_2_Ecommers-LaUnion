@@ -67,7 +67,7 @@ const productsController = {
             price: Number(req.body.price),
             description: req.body.description,
             //agregamos la propidead image para guardarla en el objeto nuevo con el atributo req.file que se usa en multer para obtener los atributos de la imagen que se subió al sistema
-            imagen: "/img/" + req.file.filename,
+            imagen: req.file.filename,
             categoryId: req.body.categoryId
         }
         // agregamos el nuevo producto a nuesto arreglo de productos:
@@ -108,7 +108,7 @@ const productsController = {
             return producto.id == req.params.id;
         });
         //borramos del proyecto la imagen adjunta al objeto:
-        fs.unlinkSync(path.join(__dirname,"../public", productToDelete.imagen)); 
+        fs.unlinkSync(path.join(__dirname,"../public/img/", productToDelete.imagen)); 
         //borramos el producto del archivo de productos
         products.splice(products.findIndex(function(producto){
             return producto.id == req.params.id;
