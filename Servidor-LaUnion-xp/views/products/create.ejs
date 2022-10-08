@@ -13,25 +13,53 @@
         <form class="main__form" action="/products/create" enctype="multipart/form-data" method="post">
           <h2>Crear producto</h2>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="name" name="name" placeholder="Ingrese nombre del producto" required>
-          </div>
+            <input 
+            type="text"
+            name="name"
+            id="name" 
+            <% if(locals.errors && locals.errors.name ){ %>
+              class="invalid-value"
+            <% } %> 
+            placeholder="Ingrese nombre del producto" 
+            value="<%= locals.old ? old.name : '' %>" >
+            <% if(locals.errors && locals.errors.name ){ %>
+              <p class="text-danger">* <%= errors.name.msg %> </p>
+            <% } %>
+          </div> 
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="price" name="price" placeholder="Precio total" required>
+            <input 
+            type="text"
+            id="price"
+            <% if(locals.errors && locals.errors.price ){ %>
+              class="invalid-value"
+            <% } %>
+            name="price" 
+            placeholder="Precio total" 
+            value="<%= locals.old ? old.price : '' %>">
+            <% if(locals.errors && locals.errors.price ){ %>
+              <p class="text-danger"> * <%= errors.price.msg %>  </p>
+            <% } %> 
           </div>
           <div>
-            <textarea name="description" id="description" cols="30" rows="10" placeholder="Ingrese la descripción del producto"></textarea>
+            <textarea name="description" id="description"cols="30" rows="10" placeholder="Ingrese la descripción del producto" <% if(locals.errors && locals.errors.description ){ %> class="invalid-value" <% } %> ><%= locals.old ? old.description : '' %></textarea>
+            <% if(locals.errors && locals.errors.description ){ %>
+              <p class="text-danger"> * <%= errors.description.msg %>  </p>
+            <% } %>
           </div>
           <div class="filePhoto">
             <label class="labelImagen">Seleccione imagen de articulo</label>
-         <input type="file" name="image">
+            <input type="file" name="image">
+            <% if(locals.errors && locals.errors.image ){ %>
+              <p class="text-danger"> * <%= errors.image.msg %>  </p>
+            <% } %>
           </div>
           <div class="Category">
-            <label class="tituloProducto" for="Category ID">Categoria</label>
+            <label class="tituloProducto" for="Category ID">Categoría</label>
             <select name="categoryId">
-                <option value="1">Libros</option>
-                <option value="2">Juegos</option>
-                <option value="3">figuras</option>
-              </select>
+              <option value="1">Libros</option>
+              <option value="2">Juegos</option>
+              <option value="3">figuras</option>
+            </select>
           </div>
           <button class="enviar-form-abm" type="submit">Crear</button>
         </form>

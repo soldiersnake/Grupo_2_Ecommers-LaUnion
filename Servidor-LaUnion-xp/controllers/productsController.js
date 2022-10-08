@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 //funcion para enlistar todos los productos
 function findAllProducts(){
@@ -7,18 +8,34 @@ function findAllProducts(){
     const products = JSON.parse(jsonDataProducts);
     return products;
 }
+
 //funcion para enlistar todos las categorias
 function findAllCategories(){
     const jsonDataCategories = fs.readFileSync(path.join(__dirname, '../data/categories.json'));
     const categories = JSON.parse(jsonDataCategories);
     return categories;
 }
+
 //funcion para añadir los datos a nuestro productsController
 function writeFile(products){
     // ,null y ,4 sirven para formatear el json
     const dataString = JSON.stringify(products, null, 4);
     //sobreescribimos todo el archivo con la nueva informacion:
     fs.writeFileSync(path.join(__dirname, '../data/products.json'), dataString);
+}
+
+//funcion para generar un nuevo id en un producto registrado
+function newId(){
+    //guardamos todos los productos
+    const products = findAllProducts();
+    //guardamos el ultimo producto del archivo
+    const lastProduct = products.pop();
+    if(lastProduct){
+        //sumamos 1 al id del ultimo producto registrado en el archivo
+        return lastProduct.id + 1;
+    }
+    //en el caso en el que no exista un producto, devolvemos 1
+    return 1;
 }
 
 const productsController = {
@@ -57,25 +74,34 @@ const productsController = {
         res.render("./products/create");
     },
     store: function(req, res){
-        //obetenemos la info de los productos:
-        const products = findAllProducts();
-        // obtenemos los datos del registro del formulario create.ejs
-        const newProduct = {
-            //sumamos 1 al tamaño del archivo para que el id siga creciendo de uno en uno
-            id: products.length + 1,
-            name: req.body.name,
-            price: Number(req.body.price),
-            description: req.body.description,
-            //agregamos la propidead image para guardarla en el objeto nuevo con el atributo req.file que se usa en multer para obtener los atributos de la imagen que se subió al sistema
-            imagen: req.file.filename,
-            categoryId: req.body.categoryId
+        //obtenemos los errores de las validaciones
+        const validationErrors = validationResult(req);
+        //validamos si existen o no errores en el formulario
+        if(!validationErrors.isEmpty()){
+            res.render("./products/create", {
+                errors: validationErrors.mapped(),
+                old: req.body
+            })
+        }else{
+            //obetenemos la info de los productos:
+            const products = findAllProducts();
+            // obtenemos los datos del registro del formulario create.ejs
+            const newProduct = {
+                id: newId(),
+                name: req.body.name,
+                price: Number(req.body.price),
+                description: req.body.description,
+                //agregamos la propidead image para guardarla en el objeto nuevo con el atributo req.file que se usa en multer para obtener los atributos de la imagen que se subió al sistema
+                imagen: req.file.filename,
+                categoryId: req.body.categoryId
+            }
+            // agregamos el nuevo producto a nuesto arreglo de productos:
+            products.push(newProduct);
+            // llamamos a la funcion create para sobreescribir la lista de productos que tenemos en la carpeta data
+            writeFile(products);
+            // redirigir a un enlace de confirmacion, o algo...
+            res.redirect('/');
         }
-        // agregamos el nuevo producto a nuesto arreglo de productos:
-        products.push(newProduct);
-        // llamamos a la funcion create para sobreescribir la lista de productos que tenemos en la carpeta data
-        writeFile(products);
-        // redirigir a un enlace de confirmacion, o algo...
-        res.redirect('/');
     },
     edit: function(req, res) {
         const products = findAllProducts();
