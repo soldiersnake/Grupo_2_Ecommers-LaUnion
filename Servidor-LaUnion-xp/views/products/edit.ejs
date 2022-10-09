@@ -10,9 +10,13 @@
 
     <div class="main__container">
       <div class="Contenedor-formulario">
-        <form class="main__form" action="/products/edit/<%= product.id %>?_method=PUT" enctype="application/json" method="post">
+        <form class="main__form" action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="post">
           <h2>Editar producto</h2>
           <h3 class="tituloProducto"><%= product.name %></h3>
+          <div class="img-contenedor-editar">
+            <h3 class="tituloProducto">Imagen</h3>
+            <img id="producto-editar" src="/img/<%= product.imagen %> ">
+          </div>
           <div class="inputFormulario">
             <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>">
             <% if(locals.errors && locals.errors.name ){ %>
@@ -31,12 +35,13 @@
               <p class="text-danger"> * <%= errors.description.msg %>  </p>
             <% } %>
           </div>
-          <!--
           <div class="filePhoto">
             <label class="labelImagen">Seleccione imagen de articulo</label>
-         <input  type="file" name="image" id="image">
+            <input  type="file" name="imagen" id="imagen">
+            <% if(locals.errors && locals.errors.imagen ){ %>
+              <p class="text-danger"> * <%= errors.imagen.msg %>  </p>
+            <% } %>
           </div>
-          -->
           <div class="Category">
             <label class="tituloProducto" for="categoryId">Categoría</label>
             <select name="categoryId">

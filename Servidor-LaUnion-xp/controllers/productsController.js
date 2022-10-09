@@ -112,7 +112,7 @@ const productsController = {
     },
     update: (req, res) => {
 
-            //obtenemos los errores de las validaciones
+        //obtenemos los errores de las validaciones
         const validationErrors = validationResult(req);
         //buscamos todos los productos que tenemos
         const products = findAllProducts();
@@ -132,6 +132,12 @@ const productsController = {
             productToUpdate.name = req.body.name;
             productToUpdate.description = req.body.description;
             productToUpdate.price = req.body.price;
+            //eliminar la imagen cuando cambie
+            if(req.file){
+                //borramos del proyecto la imagen adjunta al objeto:
+                fs.unlinkSync(path.join(__dirname,"../public/img/", productToUpdate.imagen)); 
+            }
+            productToUpdate.imagen = req.file ? req.file.filename : productToUpdate.imagen;
             productToUpdate.categoryId = req.body.categoryId;
             //sobreescribimos el registro en nuestro archivo js pasando products
             writeFile(products);

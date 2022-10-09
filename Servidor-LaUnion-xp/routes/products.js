@@ -18,7 +18,24 @@ const storage = multer.diskStorage({
         cb(null, newFileName);
     }
 });
-const upload = multer({storage:storage});
+const upload = multer({ 
+    storage: storage, 
+    fileFilter: (req, file, cb)=>{
+        const extensionesAceptadas = ['.jpg', '.png', '.jpeg'];
+
+        const info = path.extname(file.originalname)
+
+        const result = extensionesAceptadas.includes(info)
+
+        //Se agrego esta linea de codigo//
+        if(!result){
+            req.file = file;
+        }
+        //------------------------------//
+
+        cb(null, result);
+    } 
+})
 
 
 //Páginas por categoria de producto
@@ -34,12 +51,12 @@ router.get('/carrito/:id', productsController.carrito);
 
 //Cerar productos
 router.get('/create', productsController.create);
-router.post('/create',upload.single("image"), createProductValidation, productsController.store);
+router.post('/create', upload.single("imagen"), createProductValidation, productsController.store);
 //
 
 //Editar productos
 router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id',editProductValidation, productsController.update);
+router.put('/edit/:id', upload.single("imagen"), editProductValidation, productsController.update);
 
 //Eliminar productos
 router.delete('/delete/:id', productsController.delete);

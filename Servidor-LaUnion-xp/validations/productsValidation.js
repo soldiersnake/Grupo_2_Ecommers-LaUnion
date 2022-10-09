@@ -16,21 +16,17 @@ module.exports = {
         body('description')
             .notEmpty()
             .withMessage('Ingresa una descripción válida'),
-        body('image')
-        .custom((value, {req}) => {
-            let file = req.file;
-            let acceptedExtensions = ['.jpg', '.jpeg', '.png'];
-
-            if(!file){
-                throw new Error('Tienes que subir una imagen');
-            } else {
-                let fileExtension = path.extname(file.originalname);
-                if(!acceptedExtensions.includes(fileExtension)){
-                    throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-                }
-            }
-            return true;
-        }),
+        body('imagen')
+            .custom(function(value, {req}){
+                return req.file;
+            })
+            .withMessage('Campo obligatorio imagen')
+            .bail()
+            .custom(function(value, {req}){
+                const extensionesAceptadas = ['.jpg', '.png', '.jpeg'];
+                const extension = path.extname(req.file.originalname);
+                return extensionesAceptadas.includes(extension);
+            }).withMessage('Imagen invalida'),
         body('categoryId')
             .notEmpty()
             .withMessage('Tienes que elegir una categoría')
@@ -48,6 +44,20 @@ module.exports = {
             .withMessage('Ingrese un valor númerico'),
         body('description')
             .notEmpty()
-            .withMessage('Ingresa una descripción válida')
+            .withMessage('Ingresa una descripción válida'),
+        body('imagen')
+            // .custom(function(value, {req}){
+            //     return req.file;
+            // })
+            // .withMessage('Campo obligatorio imagen')
+            // .bail()
+            .custom(function(value, {req}){
+                if(req.file){
+                    const extensionesAceptadas = ['.jpg', '.png', '.jpeg'];
+                    const extension = path.extname(req.file.originalname);
+                    return extensionesAceptadas.includes(extension);
+                }
+                return true;
+            }).withMessage('Imagen invalida')
     ]
 }

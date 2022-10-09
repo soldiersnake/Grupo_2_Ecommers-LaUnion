@@ -9,7 +9,6 @@
     color: white;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     text-shadow: 1px 2px black;
-    cursor: pointer;
     transition: color 200ms;
     background-image: url('/img/erik-mclean-LSPUdV6IWsY-unsplash.jpg');
     background-size: cover;
@@ -40,7 +39,14 @@
     text-shadow: none;
     margin-bottom: 10px;
 }
-
+.img-contenedor-editar {
+    width: 20%;
+    height: 20%;
+    margin: auto;
+}
+#producto-editar {
+    width: 100%;
+}
 .inputFormulario input{
     border-radius: 5px;
     padding: 3px;
