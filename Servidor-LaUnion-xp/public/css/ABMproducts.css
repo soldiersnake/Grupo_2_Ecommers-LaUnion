@@ -119,7 +119,7 @@ input .main__container{
 
 .editar-form-abm{
     background-color: rgb(194, 204, 86);
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     border-radius: 5px;
@@ -130,6 +130,24 @@ input .main__container{
 
 .editar-form-abm:hover{
     background-color: blueviolet;
-    color: black;
+    color: white;
     border: solid 2px red;
+    cursor: pointer;
+}
+
+.eliminar-form-abm{
+    background-color: red;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: larger;
+}
+.eliminar-form-abm:hover{
+    background-color: blueviolet;
+    color: white;
+    border: solid 2px red;
+    cursor: pointer;
 }

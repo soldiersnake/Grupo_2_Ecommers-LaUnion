@@ -37,6 +37,17 @@ module.exports = {
     ],
     //Validaciones del formulario de edición de productos: pendiente!!
     editProductValidation: [
-
+        body('name')
+            .notEmpty()
+            .withMessage('Ingresa un nombre válido'),
+        body('price')
+            .notEmpty()
+            .withMessage('Ingresa un precio válido')
+            .bail()
+            .isNumeric()
+            .withMessage('Ingrese un valor númerico'),
+        body('description')
+            .notEmpty()
+            .withMessage('Ingresa una descripción válida')
     ]
 }

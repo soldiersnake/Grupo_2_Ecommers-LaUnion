@@ -111,22 +111,33 @@ const productsController = {
         res.render("./products/edit", { product : productToEdit});
     },
     update: (req, res) => {
+
+            //obtenemos los errores de las validaciones
+        const validationErrors = validationResult(req);
         //buscamos todos los productos que tenemos
         const products = findAllProducts();
-        //encontramos el plato con el id que vamos a editar y lo retornamos
+        //encontramos el producto con el id que vamos a editar y lo retornamos
         const productToUpdate = products.find( function(producto){
             return producto.id == req.params.id;
         });
-        //agregamos los nuevos valores al item editado platoEncontrado que es una referencia a la constante data
-        productToUpdate.name = req.body.name;
-        productToUpdate.description = req.body.description;
-        productToUpdate.price = req.body.price;
-        productToUpdate.categoryId = req.body.categoryId;
-        
-        //sobreescribimos el registro en nuestro archivo js pasando data
-        writeFile(products);
-        //redirigimos
-        res.redirect('/');
+        //validamos si existen o no errores en el formulario
+        if(!validationErrors.isEmpty()){
+            res.render("./products/edit", {
+                errors: validationErrors.mapped(),
+                old: req.body,
+                product: productToUpdate
+            })
+        } else {
+            //agregamos los nuevos valores al item editado porductToUpdate que es una referencia a la constante products
+            productToUpdate.name = req.body.name;
+            productToUpdate.description = req.body.description;
+            productToUpdate.price = req.body.price;
+            productToUpdate.categoryId = req.body.categoryId;
+            //sobreescribimos el registro en nuestro archivo js pasando products
+            writeFile(products);
+            //redirigimos
+            res.redirect('/');
+        }
     }, 
     delete: (req, res) => {
         const products = findAllProducts();

@@ -94,5 +94,13 @@
         "price": 250000,
         "imagen": "figura4.png",
         "categoryId": 3
+    },
+    {
+        "id": 13,
+        "name": "Attac",
+        "price": "8800055555",
+        "description": "vfvdvdvdfvdfvfdvdfvdfiiiyytytr",
+        "imagen": "image1665273520810.jpg",
+        "categoryId": "1"
     }
 ]

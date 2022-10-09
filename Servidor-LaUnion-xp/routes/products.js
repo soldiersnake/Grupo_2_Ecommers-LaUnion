@@ -3,7 +3,6 @@ var express = require('express');
 var router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const { body } = require('express-validator'); 
 
 //Módulos propios
 const productsController = require('../controllers/productsController');
@@ -35,11 +34,12 @@ router.get('/carrito/:id', productsController.carrito);
 
 //Cerar productos
 router.get('/create', productsController.create);
-router.post('/create', upload.single("image"), createProductValidation,  productsController.store);
+router.post('/create',upload.single("image"), createProductValidation, productsController.store);
+//
 
 //Editar productos
 router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single("image"), productsController.update);
+router.put('/edit/:id',editProductValidation, productsController.update);
 
 //Eliminar productos
 router.delete('/delete/:id', productsController.delete);

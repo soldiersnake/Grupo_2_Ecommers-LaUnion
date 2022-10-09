@@ -10,17 +10,26 @@
 
     <div class="main__container">
       <div class="Contenedor-formulario">
-        <form class="main__form" action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="post">
+        <form class="main__form" action="/products/edit/<%= product.id %>?_method=PUT" enctype="application/json" method="post">
           <h2>Editar producto</h2>
           <h3 class="tituloProducto"><%= product.name %></h3>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" required>
+            <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>">
+            <% if(locals.errors && locals.errors.name ){ %>
+              <p class="text-danger"> * <%= errors.name.msg %>  </p>
+            <% } %>
           </div>
           <div class="inputFormulario">
-            <input type="text" class="text-box" id="price" name="price" value="<%= product.price %>" required>
+            <input type="text" class="text-box" id="price" name="price" value="<%= product.price %>">
+            <% if(locals.errors && locals.errors.price ){ %>
+              <p class="text-danger"> * <%= errors.price.msg %>  </p>
+            <% } %>
           </div>
           <div>
             <textarea name="description" id="description" cols="30" rows="10"><%= product.description %></textarea>
+            <% if(locals.errors && locals.errors.description ){ %>
+              <p class="text-danger"> * <%= errors.description.msg %>  </p>
+            <% } %>
           </div>
           <!--
           <div class="filePhoto">
@@ -29,17 +38,17 @@
           </div>
           -->
           <div class="Category">
-            <label class="tituloProducto" for="categoryId">Categoria</label>
+            <label class="tituloProducto" for="categoryId">Categoría</label>
             <select name="categoryId">
-                <option value="1">Libros</option>
-                <option value="2">Juegos</option>
-                <option value="3">figuras</option>
-              </select>
+              <option value="1">Libros</option>
+              <option value="2">Juegos</option>
+              <option value="3">figuras</option>
+            </select>
           </div>
           <button class="editar-form-abm" type="submit">Editar</button>
         </form>
-        <form action="/products/delete/<%= product.id %>?_method=delete" method="post">
-          <button class="editar-form-abm">Eliminar</button>
+        <form action="/products/delete/<%= product.id %>?_method=delete" method="post" style="text-align: center;">
+          <button class="eliminar-form-abm">Eliminar</button>
         </form>
       </div>
           
