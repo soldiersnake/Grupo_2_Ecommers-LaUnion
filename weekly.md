@@ -1,4 +1,29 @@
-15/09722 - pactada proxima reunion para sprint 3
+
+# weekly 22/09/22
+A lo largo de la reunión pactada para el dia 22 de septiembre del año en curso, se discutieron los tres aspectos importantes involucrados en una ceremonia convencional del registro de actividades hasta la fecha
+- ¿ Qué hizo ayer ?
+> En dicha reunion definimos las actividaddes a realizar y las distribuimos de la mejor manera segun los conocimiento o fortalezas de cada integrante.
+- ¿ Se encontró algún impedimento ?
+> Uno de los integrantes presento problemas de salud que le impidieron participar de la reunion.
+- ¿ Qué se va a hacer hoy ?
+> Se llegó al mutuo acuerdo de dividir la tareas, y comunicar de forma periodica el estatus del cumplimiento de cada una de las tareas asignadas. 
+A partir de la reunion pactada se procedio a dividir las tareas de la siguiente manera:
+★ Archivo retro.md con el resultado de la retrospectiva.(Diego)
+★ Archivo daily.md con sus opiniones sobre las daylies/weeklies. (Diego)
+★ Tablero de trabajo actualizado.(Diego -David)
+★ Archivos products.json y users.json con datos de productos y usuarios. (Alejandro-Mariano)
+★ Administración completa de productos con:
+○ Listado
+○ Detalle
+○ Creación
+○ Edición
+○ Eliminación
+(Alejandro-Mariano)
+○ Definir Wireframes de la vista de usuarios (cliente y administrador) (David)
+
+
+
+
 # weekly 15/09/22 
 A lo largo de la reunión pactada para el dia 15 de septiembre del año en curso, se discutieron los tres aspectos importantes involucrados en una ceremonia convencional del registro de actividades hasta la fecha
 - ¿ Qué hizo ayer ?

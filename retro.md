@@ -1,3 +1,19 @@
+# Restrospectiva Sprint 4
+- ¿Qué ha salido bien? 
+> En este sprint pudimos organizarnos de una mejor manera y dimos por cumplido los objetivos planteados en fondo y forma del proyecto.
+
+- ¿Qué problemas tuvimos?
+> Atraso en la responsabilidades y varios acotencimientos de los integrantes. Por mas que se logre cumplir con el sprint consideramos que se puede mejorar aun en  varios puntos.
+
+- ¿Qué hicimos bien?
+> Hubo comunicación en el grupo de trabajo, se dividieron las cargas segun las habilidades de cada integrante
+
+- ¿Qué se puede mejorar?
+> Podriamos dedicarle mas tiempo a nuestro proyecto de manera que todos los integrantes del grupo interfiramos en una medida equivalente en su realizacion.
+
+- ¿A qué mejora nos comprometemos para el próximo sprint?
+> Como equipo nos comprometemos  a dedicar mas tiempo al proyecto para que a fin de cuentas tengamos los mismos conocimienteos y poder aplicarlos individualmente.
+
 # Restrospectiva Sprint 3
 - ¿Qué ha salido bien? 
 > La idea es creativa y tiene mucho potencial para desarrollar, la cantidad de sitios para inspirarnos es infinita. Pudimos establecer una pagina con una distribución esteticamente adecuada en el papel y tratamos de llevarla a codigo de la manera mas fiel a los diseños realizados
