@@ -53,7 +53,13 @@ header {
 }
 /*--------------------------------------------------------*/
 /* MAIN */
-.main {
+.mainlog {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+}
+.mainreg {
     position: relative;
     width: 100%;
     min-height: 100%;
@@ -284,7 +290,10 @@ circle-check {
     .menu ul li a:hover {
         font-size: 30px;
     }
-    .main {
+    .mainlog {
+        height: 100vh;
+    }
+    .mainreg {
         height: auto;
     }
     .espacio-imagen, 
