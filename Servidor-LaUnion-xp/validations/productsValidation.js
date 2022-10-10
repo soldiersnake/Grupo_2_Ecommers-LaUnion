@@ -26,7 +26,7 @@ module.exports = {
                 const extensionesAceptadas = ['.jpg', '.png', '.jpeg'];
                 const extension = path.extname(req.file.originalname);
                 return extensionesAceptadas.includes(extension);
-            }).withMessage('Imagen invalida'),
+            }).withMessage('Imagen invalida, debe de ser .jpg .png .jpeg'),
         body('categoryId')
             .notEmpty()
             .withMessage('Tienes que elegir una categoría')
@@ -58,6 +58,6 @@ module.exports = {
                     return extensionesAceptadas.includes(extension);
                 }
                 return true;
-            }).withMessage('Imagen invalida')
+            }).withMessage('Imagen invalida, debe de ser .jpg .png .jpeg')
     ]
 }

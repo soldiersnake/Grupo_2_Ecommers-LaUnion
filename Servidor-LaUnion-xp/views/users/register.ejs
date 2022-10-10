@@ -29,7 +29,8 @@
                         <label>Usuario</label>
                         <div class="inputIcon">
                             <% if(locals.errors && errors.user) {%> 
-                                <input type="text" name="user" id="user" placeholder="<%= errors.user.msg %>">
+                                <input type="text" name="user" id="user">
+                                <p id="ErrFormulario">* <%= errors.user.msg %></p>
                             <% } else {  %>
                                 <input type="text" name="user" id="user" value="<%= locals.oldData ? oldData.user : null %>">
                         </div>
@@ -40,7 +41,8 @@
                         <label>Nombre(s)</label>
                         <div class="inputIcon">
                             <% if(locals.errors && errors.name) {%> 
-                                <input type="text" name="name" id="name" placeholder="<%= errors.name.msg %>">
+                                <input type="text" name="name" id="name">
+                                <p id="ErrFormulario">* <%= errors.name.msg %></p>
                             <% } else {  %>
                                 <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
                         </div>
@@ -51,7 +53,8 @@
                         <label>Apellido(s)</label>
                         <div class="inputIcon">
                             <% if(locals.errors && errors.lastName) {%> 
-                                <input type="text" name="lastName" id="lastName" placeholder="<%= errors.lastName.msg %>">
+                                <input type="text" name="lastName" id="lastName">
+                                <p id="ErrFormulario">* <%= errors.lastName.msg %></p>
                             <% } else {  %>
                                 <input type="text" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
                         </div>
@@ -62,7 +65,8 @@
                         <label>Correo electrónico</label>
                         <div class="inputIcon">
                             <% if(locals.errors && errors.email) {%> 
-                                <input type="email" name="email" id="email" placeholder="<%= errors.email.msg %>">
+                                <input type="email" name="email" id="email">
+                                <p id="ErrFormulario">* <%= errors.email.msg %></p>
                             <% } else {  %>
                                 <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                         </div>
@@ -73,7 +77,8 @@
                         <label>Contraseña</label>
                         <div class="inputIcon">
                             <% if(locals.errors && errors.password) {%> 
-                                <input type="password" name="password" id="password" placeholder="<%= errors.password.msg %>">
+                                <input type="password" name="password" id="password">
+                                <p id="ErrFormulario">* <%= errors.password.msg %></p>
                             <% } else {  %>
                                 <input type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : null %>">
                         </div>
@@ -84,7 +89,8 @@
                         <label>Confirmar contraseña</label>
                         <div class="inputIcon">
                             <% if(locals.errors && errors.confirmPassword) {%> 
-                                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="<%= errors.confirmPassword.msg %>">
+                                <input type="password" name="confirmPassword" id="confirmPassword">
+                                <p id="ErrFormulario">* <%= errors.confirmPassword.msg %></p>
                             <% } else {  %>
                                 <input type="password" name="confirmPassword" id="confirmPassword" value="<%= locals.oldData ? oldData.confirmPassword : null %>">
                         </div>
@@ -96,6 +102,9 @@
                             <label for="avatar" id="avatarL" class="main__form-upload">Imagen de perfil</label>
                         </div>
                         <input type="file" name="avatar" id="avatar">
+                        <% if(locals.errors && locals.errors.avatar ){ %>
+                            <p id="ErrFormulario"> * <%= errors.avatar.msg %>  </p>
+                        <% } %>
                     </div>
                     <div class="inputBx">
                         <input type="submit" value="Crear cuenta">

@@ -6,6 +6,33 @@
         "email": "mariano@mail.com",
         "password": "mariano",
         "confirmPassword": "mariano",
-        "imgPerfil": "avatar1664579184195.png"
+        "avatar": "avatar1664579184195.png"
+    },
+    {
+        "user": "mariano",
+        "name": "Mariano",
+        "lastName": "Gandulfo",
+        "email": "mariano.maciasgandulfo@gmail.com",
+        "password": "2313213213",
+        "confirmPassword": "321321321321",
+        "avatar": "avatar1665433395091.jpg"
+    },
+    {
+        "user": "Alejandro",
+        "name": "alejandro",
+        "lastName": "alejandro",
+        "email": "alejandro@ale.com",
+        "password": "123456789",
+        "confirmPassword": "123456789",
+        "avatar": "avatar1665433873923.png"
+    },
+    {
+        "user": "Diego",
+        "name": "Diego",
+        "lastName": "Diego",
+        "email": "diego@gmail.com",
+        "password": "123456789",
+        "confirmPassword": "123456789",
+        "avatar": "avatar1665435081968.png"
     }
 ]

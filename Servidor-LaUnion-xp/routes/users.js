@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const usersController = require('../controllers/usersController');
 const path = require('path');
 const multer = require('multer');
-const { body } = require('express-validator');
+const { createUsersValidation } = require('../validations/usersValidation');
+const usersController = require('../controllers/usersController');
 
 //configuramos multer
 const storage = multer.diskStorage({
@@ -15,31 +15,26 @@ const storage = multer.diskStorage({
         cb(null, newFileName);
     }
 });
-const upload = multer({storage:storage});
-
-// validaciones
-const validation = [
-    body('user').notEmpty().withMessage('El campo Usuario es obligatorio'),
-    body('name').notEmpty().withMessage('El campo Nombre es obligatorio'),
-    body('lastName').notEmpty().withMessage('El campo Apellido es obligatorio'),
-    body('email')
-        .notEmpty().withMessage('El campo Email es obligatorio').bail()
-        .isEmail().withMessage('Debes de escribir un formato de correo Valido'),
-    body('password').notEmpty().withMessage('El campo contraseña es obligatorio'),
-    body('confirmPassword').notEmpty().withMessage('El campo confirmar contraseña es obligatorio'),
-    // body('avatar').custom((value, { req }) => {
-    //     let file = req.file;
-    //     if(!file){
-    //         throw new Error('Tienes q subir una imagen');
-    //     }
-    // })
-];
+const upload = multer({ 
+    storage: storage, 
+    fileFilter: (req, file, cb)=>{
+        const extensionesAceptadas = ['.jpg', '.png', '.jpeg'];
+        const info = path.extname(file.originalname)
+        const result = extensionesAceptadas.includes(info)
+        //Se agrego esta linea de codigo//
+        if(!result){
+            req.file = file;
+        }
+        //------------------------------//
+        cb(null, result);
+    } 
+})
 
 /* GET users listing. */
 router.get('/login', usersController.login);
 // formulario registro
 router.get('/register', usersController.register);
 // Procesar el registro
-router.post('/register', upload.single("avatar"), validation, usersController.RegisterUser);
+router.post('/register', upload.single("avatar"), createUsersValidation, usersController.RegisterUser);
 
 module.exports = router;

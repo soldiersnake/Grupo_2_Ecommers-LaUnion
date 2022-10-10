@@ -28,22 +28,21 @@ const usersController = {
         // requerir el validador
         const resultValidation = validationResult(req);
         
-        //trae los usuarios
-        const users = findAllUsers();
-        // utilizamos los campos del formulario para crear el nuevo objeto/usuario
-        const newUsers = {
-          user: req.body.user,
-          name: req.body.name,
-          lastName: req.body.lastName,
-          email: req.body.email,
-          password: req.body.password,
-          confirmPassword: req.body.confirmPassword,
-          imgPerfil: req.file.filename,
-        };
-
         if(resultValidation.errors.length > 0 ){
           return res.render('./users/register', { errors : resultValidation.mapped(), oldData: req.body })
         }else{
+           //trae los usuarios
+          const users = findAllUsers();
+          // utilizamos los campos del formulario para crear el nuevo objeto/usuario
+          const newUsers = {
+            user: req.body.user,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: req.body.password,
+            confirmPassword: req.body.confirmPassword,
+            avatar: req.file.filename,
+          };
           users.push(newUsers);
           writeFile(users);
           res.redirect('/users/login');

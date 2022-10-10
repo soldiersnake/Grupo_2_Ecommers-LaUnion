@@ -84,9 +84,10 @@ header {
     width: 50%;
 }
 
-.ErrFormulario{
+#ErrFormulario{
     color: red;
     font-weight: 700;
+    margin: 3px;
 }
 
 h2 {
