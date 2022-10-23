@@ -15,93 +15,97 @@
         <div class="espacio-formulario">
             <div class="formulario">
                 <h2>Registro</h2>
-                <!-- <% if(locals.errors) {%> 
-                    <div class="ErrFormulario">
-                        <% for( oneError in errors ) { %>
-                            <ul>
-                                <li><%= errors[oneError].msg %> </li>
-                            </ul>
-                        <% } %>  
-                    </div>
-                    <% } %>  -->
+                
                 <form action="/users/register" enctype="multipart/form-data" method="post">
                     <div class="inputBx">
                         <label>Usuario</label>
                         <div class="inputIcon">
-                            <% if(locals.errors && errors.user) {%> 
-                                <input type="text" name="user" id="user">
+                            <input 
+                            type="text" 
+                            name="user" 
+                            id="user"
+                            value="<%= locals.old ? old.user : '' %>">
+                            <% if(locals.errors && errors.user){%> 
                                 <p id="ErrFormulario">* <%= errors.user.msg %></p>
-                            <% } else {  %>
-                                <input type="text" name="user" id="user" value="<%= locals.oldData ? oldData.user : null %>">
-                        </div>
-                        <% } %> 
+                            <% } %>   
+                        </div> 
                     </div>
 
                     <div class="inputBx">
                         <label>Nombre(s)</label>
                         <div class="inputIcon">
+                            <input 
+                            type="text" 
+                            name="name" 
+                            id="name"
+                            value="<%= locals.old ? old.name : '' %>">
                             <% if(locals.errors && errors.name) {%> 
-                                <input type="text" name="name" id="name">
                                 <p id="ErrFormulario">* <%= errors.name.msg %></p>
-                            <% } else {  %>
-                                <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
+                            <% } %> 
                         </div>
-                        <% } %> 
                     </div>
 
                     <div class="inputBx">
                         <label>Apellido(s)</label>
-                        <div class="inputIcon">
-                            <% if(locals.errors && errors.lastName) {%> 
-                                <input type="text" name="lastName" id="lastName">
+                        <div class="inputIcon"> 
+                            <input 
+                            type="text" 
+                            name="lastName" 
+                            id="lastName"
+                            value="<%= locals.old ? old.lastName : '' %>">
+                            <% if(locals.errors && errors.lastName) {%>
                                 <p id="ErrFormulario">* <%= errors.lastName.msg %></p>
-                            <% } else {  %>
-                                <input type="text" name="lastName" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
+                            <% } %>
                         </div>
-                        <% } %> 
                     </div>
 
                     <div class="inputBx">
                         <label>Correo electrónico</label>
-                        <div class="inputIcon">
-                            <% if(locals.errors && errors.email) {%> 
-                                <input type="email" name="email" id="email">
+                        <div class="inputIcon"> 
+                            <input 
+                            type="email" 
+                            name="email" 
+                            id="email"
+                            value="<%= locals.old ? old.email : '' %>">
+                            <% if(locals.errors && errors.email) {%>
                                 <p id="ErrFormulario">* <%= errors.email.msg %></p>
-                            <% } else {  %>
-                                <input type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
+                            <% } %>
                         </div>
-                        <% } %> 
                     </div>
 
                     <div class="inputBx">
                         <label>Contraseña</label>
                         <div class="inputIcon">
+                            <input 
+                            type="password" 
+                            name="password" 
+                            id="password">
                             <% if(locals.errors && errors.password) {%> 
-                                <input type="password" name="password" id="password">
                                 <p id="ErrFormulario">* <%= errors.password.msg %></p>
-                            <% } else {  %>
-                                <input type="password" name="password" id="password" value="<%= locals.oldData ? oldData.password : null %>">
+                            <% } %>
                         </div>
-                        <% } %> 
                     </div>
-
+                    <!--
                     <div class="inputBx">
                         <label>Confirmar contraseña</label>
                         <div class="inputIcon">
-                            <% if(locals.errors && errors.confirmPassword) {%> 
+                            <//% if(locals.errors && errors.confirmPassword) {%> 
                                 <input type="password" name="confirmPassword" id="confirmPassword">
-                                <p id="ErrFormulario">* <%= errors.confirmPassword.msg %></p>
-                            <% } else {  %>
-                                <input type="password" name="confirmPassword" id="confirmPassword" value="<%= locals.oldData ? oldData.confirmPassword : null %>">
+                                <p id="ErrFormulario">* <//%= errors.confirmPassword.msg %></p>
+                            <//% } else {  %>
+                                <input type="password" name="confirmPassword" id="confirmPassword" value="<//%= locals.old ? old.confirmPassword : null %>">
                         </div>
-                        <% } %> 
+                        <//% } %> 
                     </div>
-
+                    -->
                     <div class="inputBx">
                         <div class="inputIcon">
                             <label for="avatar" id="avatarL" class="main__form-upload">Imagen de perfil</label>
                         </div>
-                        <input type="file" name="avatar" id="avatar">
+                        <input 
+                        type="file" 
+                        name="avatar" 
+                        id="avatar">
                         <% if(locals.errors && locals.errors.avatar ){ %>
                             <p id="ErrFormulario"> * <%= errors.avatar.msg %>  </p>
                         <% } %>
@@ -111,10 +115,10 @@
                     </div>
                     <div class="inputBx">
                         <p>¿Ya tienes una cuenta? <a href="/users/login">Inicia sesión</a></p>
+                    </div>
                 </form>
             </div>
         </div>
-        </form>
     </section>
 
     <!-- FOOTER -->

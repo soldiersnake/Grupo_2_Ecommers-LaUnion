@@ -1,38 +1,11 @@
 [
     {
-        "user": "mariano",
-        "name": "mariano",
-        "lastName": "mariano",
-        "email": "mariano@mail.com",
-        "password": "mariano",
-        "confirmPassword": "mariano",
-        "avatar": "avatar1664579184195.png"
-    },
-    {
-        "user": "mariano",
-        "name": "Mariano",
-        "lastName": "Gandulfo",
-        "email": "mariano.maciasgandulfo@gmail.com",
-        "password": "2313213213",
-        "confirmPassword": "321321321321",
-        "avatar": "avatar1665433395091.jpg"
-    },
-    {
-        "user": "Alejandro",
-        "name": "alejandro",
-        "lastName": "alejandro",
-        "email": "alejandro@ale.com",
-        "password": "123456789",
-        "confirmPassword": "123456789",
-        "avatar": "avatar1665433873923.png"
-    },
-    {
-        "user": "Diego",
-        "name": "Diego",
-        "lastName": "Diego",
-        "email": "diego@gmail.com",
-        "password": "123456789",
-        "confirmPassword": "123456789",
-        "avatar": "avatar1665435081968.png"
+        "id": 1,
+        "user": "Pedro95",
+        "name": "Pedro Alejandro",
+        "lastName": "Gutierrez Garcia",
+        "email": "alejoguti77@gmail.com",
+        "password": "$2a$10$9NfWOBlSlt5cIBiwSpNdDOQ/3zGLNF4SwuPGFe.DGsD78u66LnSoe",
+        "avatar": "avatar1666411671992.jpg"
     }
 ]

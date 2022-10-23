@@ -15,17 +15,20 @@
         <div class="espacio-formulario">
             <div class="formulario">
                 <h2>Inicio de sesión</h2>
-                <form>
+                <form action="/users/login" method="post">
                     <div class="inputBx">
                         <label>Correo electrónico</label>
                         <div class="inputIcon">
-                            <input type="text" name="email" id="email" class="" required>
+                            <input type="text" name="email" id="email" class="">
+                            <% if (locals.errors && errors.email) { %>
+                                <p id="ErrFormulario">* <%= errors.email.msg %></p>
+                            <% } %>
                         </div>
                     </div>
                     <div class="inputBx">
                         <label>Contraseña</label>
                         <div class="inputIcon">
-                            <input type="password" name="password" id="password" class="" required>
+                            <input type="password" name="password" id="password" class="">
                         </div>
                     </div>
                     <div class="remember">

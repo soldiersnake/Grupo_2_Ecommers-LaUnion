@@ -35,7 +35,7 @@ const upload = multer({
 
         cb(null, result);
     } 
-})
+});
 
 
 //Páginas por categoria de producto

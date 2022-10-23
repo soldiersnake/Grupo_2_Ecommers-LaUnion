@@ -3,12 +3,19 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const session = require('express-session');
 
 var indexRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 let productsRouter = require('./routes/products');
 
 //Configuración
+//session
+app.use(session({
+    secret: "Shhh, It's a secret",
+    resave: false,
+    saveUninitialized: false
+}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

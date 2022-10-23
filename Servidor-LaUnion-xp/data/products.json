@@ -94,5 +94,13 @@
         "price": 250000,
         "imagen": "figura4.png",
         "categoryId": 3
+    },
+    {
+        "id": 13,
+        "name": "Attack on titan vol. 27",
+        "price": 88000,
+        "description": "dhsbjhcsbdjvhbjshvbjfbhvjkdfvbhkjdfvbhdfjkvbhdkjfbvhjhfvbjkhfvbdjkfvbhjdfbjfbjkdhbvjbfdv",
+        "imagen": "imagen1666482616166.jpg",
+        "categoryId": "1"
     }
 ]

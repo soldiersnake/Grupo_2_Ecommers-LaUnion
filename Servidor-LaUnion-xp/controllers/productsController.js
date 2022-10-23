@@ -78,6 +78,9 @@ const productsController = {
         const validationErrors = validationResult(req);
         //validamos si existen o no errores en el formulario
         if(!validationErrors.isEmpty()){
+            if(fs.existsSync(path.join(__dirname,"../public/img/", req.file.filename))){
+                fs.unlinkSync(path.join(__dirname,"../public/img/", req.file.filename));
+            }
             res.render("./products/create", {
                 errors: validationErrors.mapped(),
                 old: req.body
@@ -122,6 +125,9 @@ const productsController = {
         });
         //validamos si existen o no errores en el formulario
         if(!validationErrors.isEmpty()){
+            if(fs.existsSync(path.join(__dirname,"../public/img/", req.file.filename))){
+                fs.unlinkSync(path.join(__dirname,"../public/img/", req.file.filename));
+            }
             res.render("./products/edit", {
                 errors: validationErrors.mapped(),
                 old: req.body,

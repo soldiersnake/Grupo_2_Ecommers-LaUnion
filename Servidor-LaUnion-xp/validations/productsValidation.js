@@ -46,11 +46,6 @@ module.exports = {
             .notEmpty()
             .withMessage('Ingresa una descripción válida'),
         body('imagen')
-            // .custom(function(value, {req}){
-            //     return req.file;
-            // })
-            // .withMessage('Campo obligatorio imagen')
-            // .bail()
             .custom(function(value, {req}){
                 if(req.file){
                     const extensionesAceptadas = ['.jpg', '.png', '.jpeg'];
