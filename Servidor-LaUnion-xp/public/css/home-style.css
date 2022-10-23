@@ -52,7 +52,34 @@ header {
 .menu ul li a:hover {
     color: #ffb600;
 }
-
+/*menu desplegable*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(168,53,54,0.7);
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 0px 5px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.lista-desplegable {
+    display: block;
+    list-style: none;
+}
+.menu-usuario {
+    display: flex;
+    align-items: center;
+}
 
 /*----------------------------------*/
 .banner {

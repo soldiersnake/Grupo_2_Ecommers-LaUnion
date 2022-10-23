@@ -63,7 +63,14 @@ const usersController = {
       let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
       //verificar la contraseña del usuario que intenta ingresar
       if (isOkThePassword) {
+        //borramos la contraseña para que no exista el registro en session por seguridad
+        delete userToLogin.password;
         req.session.userLogged = userToLogin;
+        //Si en el formulario de inicio de sesion se tildo la opcion de recuerdame, vamos a setear una cookie: maxAge: (1000*60)*2 = 2minutos
+        if(req.body.rememberMe) {
+          res.cookie('userEmail', req.body.email, { maxAge: (1000*60)*2 })
+        }
+
         //caso en el que coincide la contraseña ingresada con la de la db
         return res.redirect('./profile');
       }
@@ -87,9 +94,9 @@ const usersController = {
   },
   //Renderizar la vista de perfil de usuario 
   profile: function (req, res, next) {
-    console.log('Estas en profile');
-    console.log(req.session);
-    res.render('./users/userProfile');
+    res.render('./users/userProfile', {
+      user: req.session.userLogged
+    });
   },
   //Renderizar formulario de registro
   register: function (req, res, next) {
@@ -99,11 +106,13 @@ const usersController = {
   createUser: (req, res) => {
     // requerir el validador
     const resultValidation = validationResult(req);
-
+    //Si hay errores en el envio delo formulario
     if (!resultValidation.isEmpty()) {
+      //si existe un archivo de imagen de perfil lo borramos
       if (fs.existsSync(path.join(__dirname, "../public/imgUsers/", req.file.filename))) {
         fs.unlinkSync(path.join(__dirname, "../public/imgUsers/", req.file.filename));
       }
+      //renderizamos nuevamente el formulario con los errores presentados y la persistencia de los datos enviados
       res.render('./users/register', {
         errors: resultValidation.mapped(),
         old: req.body
@@ -151,6 +160,14 @@ const usersController = {
     }), 1);
     writeFile(users);
     res.redirect('/');
+  },
+  logout: (req, res) => {
+    //Eliminamos la cookie del email almacenado
+    res.clearCookie('userEmail');
+    //Eliminamos los datos de la sesion
+    req.session.destroy();
+    //redirigimos a la ruta de inicio
+    return res.redirect('/');
   }
 }
 

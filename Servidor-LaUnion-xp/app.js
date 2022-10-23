@@ -4,18 +4,27 @@ const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session');
+//las cookies se almacenan en el navegador
+const cookies = require("cookie-parser");
 
 var indexRouter = require('./routes/home');
 var usersRouter = require('./routes/users');
 let productsRouter = require('./routes/products');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 //Configuración
-//session
+
+//Session
 app.use(session({
     secret: "Shhh, It's a secret",
     resave: false,
     saveUninitialized: false
 }));
+//Cookies
+app.use(cookies());
+//Usuario Logueado
+app.use(userLoggedMiddleware);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

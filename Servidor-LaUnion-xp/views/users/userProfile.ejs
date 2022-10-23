@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head.ejs') %>
+<!-- HEAD -->
+<%- include('../partials/headUsers.ejs') %>
+
 <body>
     <!-- HEADER -->
     <%- include('../partials/header.ejs') %>
-    <!-- Container 
-    <main>
-        <div>
-            <h2>Hi <//%= user.name %> </h2>
-            <img src="/imgUsers/<//%= user.avatar %> ">
+    <!-- Container -->
+        <div style="margin-top: 40px;">
+            <h2>Hi <%= user.name %> </h2>
+            <img src="/imgUsers/<%= user.avatar %> ">
             <br>
             <br>
-            <p><//%= user.email %></p>
+            <p><%= user.email %></p>
         </div>
-    </main>-->
 	<!-- //Container -->
     <%- include('../partials/footer.ejs') %>
 </body>

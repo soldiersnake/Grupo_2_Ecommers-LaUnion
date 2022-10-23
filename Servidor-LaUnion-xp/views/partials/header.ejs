@@ -12,9 +12,27 @@
             <li><a href="/products/biblioteca">Biblioteca</a></li>
             <li><a href="/products/juegos">Juegos</a></li>
             <li><a href="/products/figuras">Figuras</a></li>
-            <li><a href="#">Buscar</a></li>
-            <li><a href="/users/login">Login</a></li>
-            <li><a href="/users/register">Sign-Up</a></li>
+            <% if (locals.isLogged) { %>
+                <div class="dropdown">
+                    <li><a class="menu-usuario" href="#">
+                        <img src="/imgUsers/<%= locals.userLogged.avatar %> " width="40" style="border-radius: 100%;">
+                        Welcome <%= locals.userLogged.user  %>
+                    </a>
+                        <div class="dropdown-content">
+                            <ol class="lista-desplegable">
+                                <li><a href="/users/profile">Profile</a></li>
+                                <li><a href="/users/logout">Logout</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                </div>
+            <% } else { %>
+                <li><a href="#">Buscar</a></li>
+                <li><a href="/users/login">Login</a></li>
+                <li><a href="/users/register">Register</a></li>
+            <% } %> 
+            
         </ul>
+        
     </nav>
 </header>
