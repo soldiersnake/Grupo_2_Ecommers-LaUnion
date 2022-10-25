@@ -33,7 +33,7 @@ function userLoggedMiddleware(req, res, next){
 
     if(req.session.userLogged){
         res.locals.isLogged = true;
-        //pasamos el usuario de una variablo local a la sesion para poder usar el usuario en las vistas
+        //pasamos el usuario de una variable local a la sesion para poder usar el usuario en las vistas
         res.locals.userLogged = req.session.userLogged;
     }
 

@@ -7,6 +7,7 @@ const multer = require('multer');
 //Módulos propios
 const productsController = require('../controllers/productsController');
 const { createProductValidation, editProductValidation } = require('../validations/productsValidation');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //configuramos multer
 const storage = multer.diskStorage({
@@ -50,15 +51,15 @@ router.get('/detalle/:id', productsController.detalle);
 router.get('/carrito/:id', productsController.carrito);
 
 //Cerar productos
-router.get('/create', productsController.create);
-router.post('/create', upload.single("imagen"), createProductValidation, productsController.store);
+router.get('/create',authMiddleware, productsController.create);
+router.post('/create',authMiddleware, upload.single("imagen"), createProductValidation, productsController.store);
 //
 
 //Editar productos
-router.get('/edit/:id', productsController.edit);
-router.put('/edit/:id', upload.single("imagen"), editProductValidation, productsController.update);
+router.get('/edit/:id',authMiddleware, productsController.edit);
+router.put('/edit/:id',authMiddleware, upload.single("imagen"), editProductValidation, productsController.update);
 
 //Eliminar productos
-router.delete('/delete/:id', productsController.delete);
+router.delete('/delete/:id',authMiddleware, productsController.delete);
 
 module.exports = router;
