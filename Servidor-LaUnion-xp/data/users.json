@@ -7,5 +7,14 @@
         "email": "alejoguti77@gmail.com",
         "password": "$2a$10$9NfWOBlSlt5cIBiwSpNdDOQ/3zGLNF4SwuPGFe.DGsD78u66LnSoe",
         "avatar": "avatar1666411671992.jpg"
+    },
+    {
+        "id": 2,
+        "user": "mariano23",
+        "name": "mariano",
+        "lastName": "macias",
+        "email": "mariano.maciasgandulfo@gmail.com",
+        "password": "$2a$10$AtwAAjPQzr2coBlV7ZEyCODvFRWF8DYpcYaAniNHjtUiT0Q5EdKI6",
+        "avatar": "avatar1667187040101.png"
     }
 ]
