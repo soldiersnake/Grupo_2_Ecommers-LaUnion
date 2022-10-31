@@ -3,20 +3,56 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
-header{
-    padding-top: 5px;
+/* header -------------*/
+header {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 10px;
+    background-image: url("/img/fondo-header.jpg");
+    background-size: contain;
+}
+.icono {
+    width: 100%;
+    text-align: center;
+    max-width: 250px;
+}
+.hamburger-button {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 4%;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.menu {
+    width: 100%;
+}
+.menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: white;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-style: italic;
-    font-weight: bolder;
+    text-shadow: 1px 2px black;
+    cursor: pointer;
+    transition: color 200ms;
+}
+.menu ul li a:hover {
+    color: #ffb600;
 }
 .banner {
     width: 100%;
     margin-bottom: -5px;
 }
-
+/*----------------------------------------*/
 h1{
     color: yellow;
     text-decoration: solid;
@@ -30,14 +66,6 @@ main{
     align-items: center;
     padding: 15px;
     width: 100%;
-}
-
-header img{
-    width: 5%;
-    height: 5%;
-    margin: 5px;
-    padding: 5px;
-    display: flex;
 }
 
 
