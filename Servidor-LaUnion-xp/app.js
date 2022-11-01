@@ -7,10 +7,10 @@ const session = require('express-session');
 //las cookies se almacenan en el navegador
 const cookies = require("cookie-parser");
 
-var indexRouter = require('./routes/home');
-var usersRouter = require('./routes/users');
-let productsRouter = require('./routes/products');
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+var indexRouter = require('./src/routes/home');
+var usersRouter = require('./src/routes/users');
+let productsRouter = require('./src/routes/products');
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 //Configuración
 
@@ -26,7 +26,7 @@ app.use(cookies());
 app.use(userLoggedMiddleware);
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './src/views'));
 app.set('view engine', 'ejs');
 app.use(methodOverride("_method"));
 app.use(express.json());
