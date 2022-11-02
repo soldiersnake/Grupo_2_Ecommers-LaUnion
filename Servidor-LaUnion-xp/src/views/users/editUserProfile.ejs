@@ -11,6 +11,8 @@
     <!-- Container -->
 
     <main>
+      <form action="/users/profile/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="post">
+
         <div class="contenedor">
           <div class="img-contenedor">
             <img id="producto" src="/imgUsers/<%= user.avatar %> ">
@@ -39,17 +41,25 @@
                             <input value="<%= user.email %>"></input>
                         </div>
                     </div>
+
+                    <div class="inputBxUser">
+                      <label for="email">Email:</label>
+                      <div class="inputIcon">
+                          <input name="password" placeholder="Ingresar Nueva contraseña"></input>
+                      </div>
+                  </div>
                 </div>
 
             </div>
             <div>
               <button class="button-cesta">
-                <a href="/products/carrito/<%= user.email %> " class="enlaceCarrito">Editar Perfil</a>
+                <a class="enlaceCarrito">Confirmar Cambios</a>
               </button>
             </div>
           </div>
         </div>
         </div>
+      </form>
       </main>
 
 	<!-- //Container -->

@@ -168,6 +168,9 @@ const usersController = {
     req.session.destroy();
     //redirigimos a la ruta de inicio
     return res.redirect('/');
+  },
+  editUser: (req, res) => {
+    res.render('./users/editUserProfile')
   }
 }
 

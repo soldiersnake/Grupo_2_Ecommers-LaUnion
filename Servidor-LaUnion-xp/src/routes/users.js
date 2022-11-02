@@ -47,6 +47,7 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 //Perfil de usuario
 router.get('/profile', authMiddleware, usersController.profile);
+router.put('/profile/edit', authMiddleware, usersController.editUser);
 
 //Logout
 router.get('/logout', authMiddleware, usersController.logout);
