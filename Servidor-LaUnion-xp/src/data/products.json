@@ -102,5 +102,13 @@
         "description": "dhsbjhcsbdjvhbjshvbjfbhvjkdfvbhkjdfvbhdfjkvbhdkjfbvhjhfvbjkhfvbdjkfvbhjdfbjfbjkdhbvjbfdv",
         "imagen": "imagen1666482616166.jpg",
         "categoryId": "1"
+    },
+    {
+        "id": 14,
+        "name": "batman",
+        "price": 50000,
+        "description": "prueba de carga",
+        "imagen": "imagen1667862111822.png",
+        "categoryId": "1"
     }
 ]

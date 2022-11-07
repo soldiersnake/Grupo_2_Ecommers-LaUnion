@@ -118,6 +118,9 @@ header {
 .formulario {
     width: 50%;
 }
+.formulario2 {
+    width: 50%;
+}
 
 #ErrFormulario{
     color: red;
@@ -343,6 +346,13 @@ circle-check {
         margin: 50px;
         font-size: 10px;
     }
+    .formulario2 {
+        width: 100%;
+        padding: 6%;
+        /* background-color: rgba(255 255 255 /0.9); */
+        font-size: 15px;
+        align-items: center;
+    }
 }
 @media (min-width: 769px) {
     header {
@@ -376,6 +386,11 @@ circle-check {
         margin-top: 70px;
     }
     .formulario {
+        width: 30%;
+        margin-right: 10%;
+        padding-bottom: 30px;
+    }
+    .formulario2 {
         width: 30%;
         margin-right: 10%;
         padding-bottom: 30px;

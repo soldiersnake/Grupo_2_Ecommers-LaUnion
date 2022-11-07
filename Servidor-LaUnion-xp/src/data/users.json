@@ -16,5 +16,14 @@
         "email": "mariano.maciasgandulfo@gmail.com",
         "password": "$2a$10$AtwAAjPQzr2coBlV7ZEyCODvFRWF8DYpcYaAniNHjtUiT0Q5EdKI6",
         "avatar": "avatar1667187040101.png"
+    },
+    {
+        "id": 3,
+        "user": "mariano2",
+        "name": "mariano",
+        "lastName": "hola",
+        "email": "hola@mail.com",
+        "password": "$2a$10$K9LFi8iBVq0Acq0dvgQ4BOWB1gTXQYDaczx8KT7qjYgRCvEAXo5KK",
+        "avatar": "avatar1667862194648.png"
     }
 ]
