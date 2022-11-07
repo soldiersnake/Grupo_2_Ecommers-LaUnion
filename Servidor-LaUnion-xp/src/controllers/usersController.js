@@ -109,7 +109,7 @@ const usersController = {
     //Si hay errores en el envio delo formulario
     if (!resultValidation.isEmpty()) {
       //si existe un archivo de imagen de perfil lo borramos
-      if (fs.existsSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename))) {
+      if (req.file && fs.existsSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename))) {
         fs.unlinkSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename));
       }
       //renderizamos nuevamente el formulario con los errores presentados y la persistencia de los datos enviados

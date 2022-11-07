@@ -78,7 +78,7 @@ const productsController = {
         const validationErrors = validationResult(req);
         //validamos si existen o no errores en el formulario
         if(!validationErrors.isEmpty()){
-            if(fs.existsSync(path.join(__dirname,"../public/img/", req.file.filename))){
+            if(req.file && fs.existsSync(path.join(__dirname,"../public/img/", req.file.filename))){
                 fs.unlinkSync(path.join(__dirname,"../public/img/", req.file.filename));
             }
             res.render("./products/create", {
