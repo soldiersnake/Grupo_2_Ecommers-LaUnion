@@ -108,9 +108,9 @@ const usersController = {
     const resultValidation = validationResult(req);
     //Si hay errores en el envio delo formulario
     if (!resultValidation.isEmpty()) {
-      let errors = validationErrors.mapped();
+      let errors = resultValidation.mapped();
       //Si no hay un error de imagen:
-      if (!errors.imagen) {
+      if (!errors.avatar) {
         //si existe un archivo de imagen de perfil lo borramos
         if (req.file && fs.existsSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename))) {
           fs.unlinkSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename));
@@ -158,7 +158,7 @@ const usersController = {
     const userToDelete = users.find(function (usuario) {
       return usuario.id == req.params.id;
     });
-    fs.unlinkSync(path.join(__dirname, "../public/imgUsers/", userToDelete.avatar));
+    fs.unlinkSync(path.join(__dirname, "../../public/imgUsers/", userToDelete.avatar));
     users.splice(users.findIndex(function (usuario) {
       return usuario.id == req.params.id;
     }), 1);

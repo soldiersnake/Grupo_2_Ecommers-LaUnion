@@ -150,7 +150,7 @@ const productsController = {
             //eliminar la imagen cuando cambie
             if (req.file) {
                 //borramos del proyecto la imagen adjunta al objeto:
-                fs.unlinkSync(path.join(__dirname, "../public/img/", productToUpdate.imagen));
+                fs.unlinkSync(path.join(__dirname, "../../public/img/", productToUpdate.imagen));
             }
             productToUpdate.imagen = req.file ? req.file.filename : productToUpdate.imagen;
             productToUpdate.categoryId = req.body.categoryId;
