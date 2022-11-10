@@ -67,8 +67,8 @@ const usersController = {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
         //Si en el formulario de inicio de sesion se tildo la opcion de recuerdame, vamos a setear una cookie: maxAge: (1000*60)*2 = 2minutos
-        if(req.body.rememberMe) {
-          res.cookie('userEmail', req.body.email, { maxAge: (1000*60)*2 })
+        if (req.body.rememberMe) {
+          res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
         }
 
         //caso en el que coincide la contraseña ingresada con la de la db
@@ -108,9 +108,13 @@ const usersController = {
     const resultValidation = validationResult(req);
     //Si hay errores en el envio delo formulario
     if (!resultValidation.isEmpty()) {
-      //si existe un archivo de imagen de perfil lo borramos
-      if (fs.existsSync(path.join(__dirname, "../public/imgUsers/", req.file.filename))) {
-        fs.unlinkSync(path.join(__dirname, "../public/imgUsers/", req.file.filename));
+      let errors = validationErrors.mapped();
+      //Si no hay un error de imagen:
+      if (!errors.imagen) {
+        //si existe un archivo de imagen de perfil lo borramos
+        if (req.file && fs.existsSync(path.join(__dirname, "../public/imgUsers/", req.file.filename))) {
+          fs.unlinkSync(path.join(__dirname, "../public/imgUsers/", req.file.filename));
+        }
       }
       //renderizamos nuevamente el formulario con los errores presentados y la persistencia de los datos enviados
       res.render('./users/register', {
