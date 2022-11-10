@@ -82,8 +82,8 @@ const productsController = {
             //Si no hay un error de imagen:
             if (!errors.imagen) {
                 //Borramos la imagen
-                if (req.file && fs.existsSync(path.join(__dirname, "../public/img/", req.file.filename))) {
-                    fs.unlinkSync(path.join(__dirname, "../public/img/", req.file.filename));
+                if (req.file && fs.existsSync(path.join(__dirname, "../../public/img/", req.file.filename))) {
+                    fs.unlinkSync(path.join(__dirname, "../../public/img/", req.file.filename));
                 }
             }
             res.render("./products/create", {
@@ -133,8 +133,8 @@ const productsController = {
             let errors = validationErrors.mapped();
             //Si no hay un error de imagen:
             if (!errors.imagen) {
-                if (fs.existsSync(path.join(__dirname, "../public/img/", req.file.filename))) {
-                    fs.unlinkSync(path.join(__dirname, "../public/img/", req.file.filename));
+                if (fs.existsSync(path.join(__dirname, "../../public/img/", req.file.filename))) {
+                    fs.unlinkSync(path.join(__dirname, "../../public/img/", req.file.filename));
                 }
             }
             res.render("./products/edit", {

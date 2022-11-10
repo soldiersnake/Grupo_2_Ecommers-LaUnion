@@ -11,3 +11,6 @@ Las tareas fueron divididas en la generación de la carpeta partials con la disp
 
 # PROXIMA weekly 15/09/22 
 >organizar sprint 4
+
+# PROXIMA weekly 
+como equipo coordinamos que la mejor opcion para nuestros tiempos es coordinar weekly y comunicarnos via redes sociales (discord / whatsapp) para temas puntuales

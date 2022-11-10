@@ -10,7 +10,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 //configuramos multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../public/imgUsers'))
+        cb(null, path.join(__dirname, '../../public/imgUsers'))
     },
     filename: (req, file, cb) => {
         const newFileName = file.fieldname + Date.now() + path.extname(file.originalname);
@@ -47,6 +47,7 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 //Perfil de usuario
 router.get('/profile', authMiddleware, usersController.profile);
+router.put('/profile/edit', authMiddleware, usersController.editUser);
 
 //Logout
 router.get('/logout', authMiddleware, usersController.logout);

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include('../partials/headUsers.ejs') %>
+<%- include('../partials/headProducts.ejs') %>
+
+
+<body>
+    <!-- HEADER -->
+    <%- include('../partials/header.ejs') %>
+    <!-- Container -->
+
+    <main>
+      <form action="/users/profile/<%= user.id %>?_method=PUT" enctype="multipart/form-data" method="post">
+
+        <div class="contenedor">
+          <div class="img-contenedor">
+            <img id="producto" src="/imgUsers/<%= user.avatar %> ">
+          </div>
+          <div class="description">
+            <h2>Editar perfil de, <%= user.name %></h2>
+            <div class="titulo-descripcion">
+                <div class="formulario">
+                    <div class="inputBxUser">
+                        <label for="name">Nombre:</label>
+                        <div class="inputIcon">
+                            <input value="<%= user.name %>"></input>
+                        </div>
+                    </div>
+
+                    <div class="inputBxUser">
+                        <label for="lastName">Apellido:</label>
+                        <div class="inputIcon">
+                            <input value="<%= user.lastName %>"></input>
+                        </div>
+                    </div>
+
+                    <div class="inputBxUser">
+                        <label for="email">Email:</label>
+                        <div class="inputIcon">
+                            <input value="<%= user.email %>"></input>
+                        </div>
+                    </div>
+
+                    <div class="inputBxUser">
+                      <label for="email">Email:</label>
+                      <div class="inputIcon">
+                          <input name="password" placeholder="Ingresar Nueva contraseña"></input>
+                      </div>
+                  </div>
+                </div>
+
+            </div>
+            <div>
+              <button class="button-cesta">
+                <a class="enlaceCarrito">Confirmar Cambios</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </form>
+      </main>
+
+	<!-- //Container -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>

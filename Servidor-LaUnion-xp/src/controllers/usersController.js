@@ -112,8 +112,8 @@ const usersController = {
       //Si no hay un error de imagen:
       if (!errors.imagen) {
         //si existe un archivo de imagen de perfil lo borramos
-        if (req.file && fs.existsSync(path.join(__dirname, "../public/imgUsers/", req.file.filename))) {
-          fs.unlinkSync(path.join(__dirname, "../public/imgUsers/", req.file.filename));
+        if (req.file && fs.existsSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename))) {
+          fs.unlinkSync(path.join(__dirname, "../../public/imgUsers/", req.file.filename));
         }
       }
       //renderizamos nuevamente el formulario con los errores presentados y la persistencia de los datos enviados
@@ -172,6 +172,9 @@ const usersController = {
     req.session.destroy();
     //redirigimos a la ruta de inicio
     return res.redirect('/');
+  },
+  editUser: (req, res) => {
+    res.render('./users/editUserProfile')
   }
 }
 

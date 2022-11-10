@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HEAD -->
+<%- include('../partials/headUsers.ejs') %>
+<%- include('../partials/headProducts.ejs') %>
+
+
+<body>
+    <!-- HEADER -->
+    <%- include('../partials/header.ejs') %>
+    <!-- Container -->
+
+    <main>
+        <div class="contenedor">
+          <div class="img-contenedor">
+            <img id="producto" src="/imgUsers/<%= user.avatar %> ">
+          </div>
+          <div class="description">
+            <h2>Bienvenido, <%= user.name %> 😁</h2>
+            <div class="titulo-descripcion">
+                <div class="formulario2">
+                    <div class="inputBxUser">
+                        <label for="name">Nombre:</label>
+                        <div class="inputIcon">
+                            <p><%= user.name %></p>
+                        </div>
+                    </div>
+                    <div class="inputBxUser">
+                        <label for="lastName">Apellido:</label>
+                        <div class="inputIcon">
+                            <p><%= user.lastName %></p>
+                        </div>
+                    </div>
+                    <div class="inputBxUser">
+                        <label for="email">Email:</label>
+                        <div class="inputIcon">
+                            <p><%= user.email %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+              <button class="button-cesta">
+                <a href="/products/carrito/<%= user.email %> " class="enlaceCarrito">Editar Perfil</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </main>
+
+	<!-- //Container -->
+    <%- include('../partials/footer.ejs') %>
+</body>
+</html>
